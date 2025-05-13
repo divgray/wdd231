@@ -113,8 +113,8 @@
         font-size: 1.2rem;
         text-decoration: overline;
         font-family: "Prompt", sans-serif;
-        transform: scale(1.1);
-        transition: transform 0.3s ease;
+        transform: scale(.8);
+        transition: transform 1s ease;
     }
 
     section {
@@ -137,6 +137,7 @@
 
     .main-section img {
         width: 200px;
+        height: auto;
         display: block;
         margin: 0 auto;
         border-radius: 5px;
@@ -162,7 +163,6 @@
         cursor: pointer;
         border-radius: 4px;
         transition: background-color 0.3s ease;
-
     }
 
     .filter-buttons button:hover {
