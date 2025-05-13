@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 231: Week01 Assignment</title>
+  <meta name="author" content="Divya Ali Priya Giray">
+  <meta name="description" content="WDD 231 Week01 assignment: Students index page.">
+  <meta name="keywords" content="wdd231, Divya">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
+  <link rel="stylesheet" href="styles/homepage.css">
+  <!-- <link rel="stylesheet" href="styles/larger.css"> -->
+
+  <script scr="scripts/.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Prompt:wght@400;600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <div class="heading">
+      <img src="images/wdd231-profile-picture.webp" alt="Profile Picture">
+      <span>Divya Ali Priya R. Giray</span>
+    </div>
+    <nav class="navbar">
+      <a href="">Home</a>
+      <a href="">Chamber</a>
+      <a href="">Final</a>
+      <a href="">GitHub Profie</a>
+      <a href="">LinkedId</a>
+    </nav>
+
+
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <div class="main-section">
+      <section>
+        <h2>Course Work</h2>
+      </section>
+      <section>
+        <h2>Rizal, Philippines</h2>
+        <img src="images/angono-nightview.jpg" alt="Night view of Angono City in Rizal, Philippines.">
+        <p>Angono, Rizal</p>
+      </section>
+    </div>
+
+    <section class="certificate">
+      <h2>Web and Computer Programming Certificate</h2>
+      <div class="filter-buttons">
+        <button>All</button>
+        <button>CSE</button>
+        <button>WDD</button>
+      </div>
+      <!-- Course list example -->
+      <ul class="course-list">
+        <li>CSE 110</li>
+        <li>WDD 130</li>
+        <li>CSE 111</li>
+        <li>CSE 210</li>
+        <li>WDD 131</li>
+        <li>WDD 231</li>
+      </ul>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> 🌸 Divya Ali Priya Giray 🌸 Rizal, Philippines</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script>
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = "Last Modified: " + document.lastModified;
+  </script>
+</body>
+
+</html>

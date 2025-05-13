@@ -1,0 +1,48 @@
+Q1 = GitHub
+
+Q2 = ..
+
+Q3 = <script src="scripts/script.js"></script>
+
+Q4 = .linklist ul li
+   x = .linklist h2 ul li
+
+Q5 = const daysUntil = `There are ${daycount} days until ${targetEvent}!`;
+
+
+Q6 = var
+
+Q7 = img
+
+Q8 =
+    <section>               a opening tag
+    highlight               class attribute value
+    class                   attribute
+    </p>                    a closing tag
+<h3>Salt Lake Temple</h3>   a nested element
+    Salt Lake Temple        content
+
+Q9 = False
+
+Q10 = <!-- This is an HTML comment -->
+
+0.5 Q11 = scripts/weather.js
+      images/temple.webp
+      resources/img/profile.png
+
+      chamber/home page.html 
+
+Q12 = styles
+      scripts
+      images
+
+Q13 = A link element is missing the rel attribute. 
+
+0.67 Q14 = Your image file size is too large, try reducing the quality using an image editing program. 
+      Your image pixel dimensions are way too large for what is actually needed on the page. Reduce the image's dimensions to a more manageable size.
+
+Q15 =  two
+
+Q16 = forest green
+
+Q17 =  The h1 tag in not inside the media query. 

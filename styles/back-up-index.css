@@ -1,0 +1,117 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Navigation Bar */
+    nav {
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .logo a {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #333;
+        text-decoration: none;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+    }
+
+    /* Main container for the top two sections */
+    .main-section {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+
+    /* Box styles for the two side-by-side sections */
+    .main-section section {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        width: 100%;
+        max-width: 500px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: 10px;
+    }
+
+    /* Full-width certificate section */
+    .certificate {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        max-width: 1100px;
+        width: 90%;
+        margin: 20px auto;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style for filter buttons within the certificate section */
+    .filter-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .filter-buttons button {
+        padding: 8px 12px;
+        border: none;
+        background-color: #007BFF;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .filter-buttons button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Course list inside certificate section */
+    .course-list {
+        list-style: none;
+        margin-top: 15px;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .course-list li {
+        margin-bottom: 8px;
+    }
+
+    /* Footer styling */
+    footer {
+        background-color: #fff;
+        border-top: 1px solid #ddd;
+        padding: 10px 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+    }

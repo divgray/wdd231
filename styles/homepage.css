@@ -1,0 +1,171 @@
+@media (min-width: 360px) {
+    :root {
+        margin: auto;
+        padding: 0;
+        background-color: #e5dfff;
+        margin: .5rem;
+        line-height: 1;
+    }
+
+    .heading {
+        background-color: #55459c;
+        padding: .5rem;
+        font-family: "Prompt", sans-serif;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Optionally, add flex-direction if needed */
+        flex-direction: row;
+    }
+
+    .heading img {
+        height: 100px;
+        width: auto;
+        border: 2px solid white;
+        box-shadow: .5rem .5rem .5rem #000000;
+        margin: 1rem;
+        border-radius: 50%;
+    }
+
+    .heading span {
+        padding: 1rem;
+        color: white;
+    }
+
+    .navbar {
+        margin-top: .5rem;
+        display: flex;
+        justify-content: space-around;
+        background-color: black;
+        margin-top: -.1rem;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: white;
+        padding: .5rem;
+        font-family: "Prompt", sans-serif;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 1rem;
+    }
+
+    nav a:hover {
+        font-size: 1.2rem;
+        text-decoration: overline;
+        font-family: "Prompt", sans-serif;
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+
+    h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-family: "Prompt", sans-serif;
+        font-size: 1rem;
+        text-align: center;
+        background-color: #55459c;
+        padding: .5rem;
+        color: white;
+        margin-top: -1.3rem;
+
+    }
+
+    /* Main container for the top two sections */
+    .main-section {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+
+    /* Box styles for the two side-by-side sections */
+    .main-section section {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        width: 100%;
+        max-width: 500px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: 10px;
+    }
+
+    .main-section img {
+        height: 150px;
+    }
+
+    .certificate {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        max-width: 1100px;
+        width: 90%;
+        margin: 20px auto;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .filter-buttons button {
+        padding: 8px 12px;
+        border: none;
+        background-color: #55459c;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .filter-buttons button:hover {
+        background-color: #3c3072;
+    }
+
+    .course-list {
+        list-style: none;
+        margin-top: 15px;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .course-list li {
+        margin-bottom: 8px;
+    }
+
+
+    footer {
+        text-align: center;
+        background-color: #55459c;
+        padding: .1rem;
+        color: white;
+        font-family: "Prompt", sans-serif;
+        font-size: 1rem;
+    }
+
+    p {
+        font-family: "Prompt", sans-serif;
+        font-size: 1rem;
+    }
+
+    /* button,
+    li,
+    p,
+    a {
+        font-family: "Prompt", sans-serif;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    h1,
+    h2,
+    span {
+        font-family: "Montseraat", sans-serif;
+        font-size: 1.5rem;
+        text-align: center;
+    } */
+
+}
