@@ -1,47 +1,105 @@
-@media (min-width: 600px) {
+@media (max-width: 580px) {
     :root {
-        margin: auto;
-        padding: 0;
         background-color: #e5dfff;
         line-height: 1;
-        max-width: 1200px;
+
+    }
+
+    main {
+        width: 310px;
+        margin: auto;
+        padding: 0;
+    }
+
+    button,
+    li,
+    p,
+    a {
+        font-family: "Prompt", sans-serif;
+        font-size: .6rem;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: left;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    span {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1rem;
+        text-align: center;
+        padding: 10px;
+    }
+
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: .8rem;
+        text-align: center;
+        background-color: #55459c;
+        padding: .5rem;
+        color: white;
+        border-radius: 5px;
+        margin-top: -1.3rem;
+
     }
 
     .heading {
         background-color: #55459c;
-        padding: .5rem;
+        /* padding: .5rem; */
         display: flex;
         justify-content: center;
         align-items: center;
         /* Optionally, add flex-direction if needed */
         flex-direction: row;
+        border-radius: 5px;
     }
 
     .heading img {
-        height: 100px;
+        height: 50px;
         width: auto;
         border: 2px solid white;
-        box-shadow: .5rem .5rem .5rem #000000;
-        margin: 1rem;
+        box-shadow: .3rem .3rem .3rem #000000;
+        margin: .5rem;
         border-radius: 50%;
     }
 
     .heading span {
-        padding: 1rem;
         color: white;
     }
 
     #menu {
-        display: none;
+        font-size: 1.2rem;
+        border: 0;
+        background-color: transparent;
+        color: #ffffff;
+        position: absolute;
+        top: 1.5%;
+        right: 8%;
+    }
+
+    #menu::before {
+        content: "☰";
+        display: inline-block;
+    }
+
+    #menu.open::before {
+        content: "✖";
     }
 
     .navbar {
-        padding: 10px 0 10px 0;
-        margin-top: .5rem;
+        display: none;
+    }
+
+    #menu.open+.navbar {
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
-        background-color: black;
-        margin-top: -.1rem;
+        list-style: none;
+        background-color: #8577c3;
+        border-radius: 5px;
     }
 
     nav a {
@@ -55,29 +113,26 @@
         font-size: 1.2rem;
         text-decoration: overline;
         font-family: "Prompt", sans-serif;
+        transform: scale(1.0);
+        transition: transform 0.3s ease;
+    }
+
+    #menu.open+nav a:hover {
+        font-size: 1.2rem;
+        text-decoration: overline;
+        font-family: "Prompt", sans-serif;
         transform: scale(1.1);
         transition: transform 0.3s ease;
     }
 
-    h2 {
-        background-color: #55459c;
-        padding: .5rem;
-        color: white;
-        margin-top: -1.3rem;
-        font-family: "Montserrat", sans-serif;
-        font-size: 1rem;
-        text-align: center;
-        border-radius: 5px;
 
-    }
-
-    /* Main container for the top two sections */
     .main-section {
         display: flex;
-        gap: 10px;
+        gap: 5px;
         justify-content: center;
         padding: 10px;
         flex-wrap: wrap;
+        margin-top: -2rem;
     }
 
     /* Box styles for the two side-by-side sections */
@@ -86,14 +141,13 @@
         border: 1px solid #ddd;
         padding: 20px;
         width: 100%;
-        max-width: 500px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         text-align: center;
-        margin: 10px;
+        margin: .5rem;
     }
 
     .main-section img {
-        height: 150px;
+        width: 200px;
     }
 
     .certificate {
@@ -101,8 +155,7 @@
         border: 1px solid #ddd;
         padding: 20px;
         max-width: 1100px;
-        width: 90%;
-        margin: 20px auto;
+        width: 86%;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
@@ -144,7 +197,7 @@
     }
 
     .course-list li {
-        margin-bottom: 5px;
+        margin-bottom: 2px;
         width: 10rem;
         padding: 5px;
         border: none;
@@ -153,35 +206,6 @@
         cursor: pointer;
         border-radius: 4px;
         transition: background-color 0.3s ease;
-    }
-
-
-    footer {
-        text-align: center;
-        background-color: #55459c;
-        padding: .1rem;
-        color: white;
-    }
-
-    footer span {
-        font-size: .8rem;
-    }
-
-    button,
-    li,
-    p,
-    a {
-        font-family: "Prompt", sans-serif;
-        font-size: .8rem;
-        text-align: center;
-    }
-
-    h1,
-    span {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.5rem;
-        text-align: center;
-        padding: 10px;
     }
 
     .course-list li.finished {
@@ -194,5 +218,17 @@
 
     .course-list li.finished::before {
         content: "✔ ";
+    }
+
+
+    footer {
+        text-align: center;
+        background-color: #55459c;
+        padding: .1rem;
+        color: white;
+    }
+
+    footer span {
+        font-size: .6rem;
     }
 }

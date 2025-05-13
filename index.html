@@ -12,9 +12,9 @@
 
   <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
   <link rel="stylesheet" href="styles/homepage.css">
-  <!-- <link rel="stylesheet" href="styles/larger.css"> -->
+  <link rel="stylesheet" href="styles/small.css">
 
-  <script scr="scripts/.js" defer></script>
+  <script src="scripts/homepage.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -29,6 +29,7 @@
       <img src="images/wdd231-profile-picture.webp" alt="Profile Picture">
       <span>Divya Ali Priya R. Giray</span>
     </div>
+    <button aria-label="menu" name="menu" type="button" id="menu"></button>
     <nav class="navbar">
       <a href="">Home</a>
       <a href="">Chamber</a>
@@ -42,10 +43,16 @@
 
   <main>
     <h1>Home</h1>
-
     <div class="main-section">
       <section>
         <h2>Course Work</h2>
+        <ul class="course-work">
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+        </ul>
       </section>
       <section>
         <h2>Rizal, Philippines</h2>
@@ -61,8 +68,7 @@
         <button>CSE</button>
         <button>WDD</button>
       </div>
-      <!-- Course list example -->
-      <ul class="course-list">
+      <ul class="course-list" id="course-list">
         <li>CSE 110</li>
         <li>WDD 130</li>
         <li>CSE 111</li>
