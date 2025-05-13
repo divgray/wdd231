@@ -197,9 +197,7 @@
 
     .course-list li.finished {
         background-color: #b4a3ff;
-        /* example: green background */
         color: black;
-        /* white text for contrast */
 
     }
 

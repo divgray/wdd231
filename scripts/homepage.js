@@ -6,6 +6,10 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('open');
 });
 
+document.getElementById('currentyear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = "Last Modified: " + document.lastModified;
+
+
 document.addEventListener('DOMContentLoaded', () => {
     // Get all filter buttons and the course list items
     const filterButtons = document.querySelectorAll('.filter-buttons button');
