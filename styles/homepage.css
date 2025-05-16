@@ -1,3 +1,225 @@
+@media (max-width: 600px) {
+    :root {
+        background-color: #e5dfff;
+        line-height: 1;
+
+    }
+
+    main {
+        width: 90%;
+        max-width: 500px;
+        min-width: 300px;
+        margin: auto;
+        padding: 0;
+    }
+
+    button,
+    .heading li,
+    p,
+    a {
+        font-family: "Prompt", sans-serif;
+        font-size: .7rem;
+        text-align: center;
+
+    }
+
+    h1 {
+        text-align: left;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.2rem;
+        padding-left: 1rem;
+    }
+
+    span {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1rem;
+        text-align: center;
+        padding: 10px;
+    }
+
+
+    .heading {
+        background-image: linear-gradient(#403577, #55459c);
+        /* background-color: #55459c; */
+        padding: .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        border-radius: 5px;
+    }
+
+    .heading img {
+        height: 50px;
+        width: auto;
+        border: 1px solid white;
+        box-shadow: .3rem .3rem .3rem #000000;
+        margin: .5rem;
+        border-radius: 50%;
+    }
+
+    .heading span {
+        color: white;
+    }
+
+    #menu {
+        font-size: 1.2rem;
+        border: 0;
+        background-color: transparent;
+        color: #ffffff;
+        position: absolute;
+        top: 1.5%;
+        right: 3%;
+    }
+
+    #menu::before {
+        content: "☰";
+        display: inline-block;
+    }
+
+    #menu.open::before {
+        content: "✖";
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    #menu.open+.navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        list-style: none;
+        background-color: #8577c3;
+        border-radius: 5px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: white;
+        padding: .5rem;
+        border-radius: 1rem;
+    }
+
+    nav a:hover {
+        font-size: 1.2rem;
+        text-decoration: overline;
+        font-family: "Prompt", sans-serif;
+        transform: scale(1.0);
+        transition: transform 0.3s ease;
+    }
+
+    #menu.open+nav a:hover {
+        font-size: 1.2rem;
+        text-decoration: overline;
+        font-family: "Prompt", sans-serif;
+        transform: scale(.8);
+        transition: transform 1s ease;
+    }
+
+    section {
+        background-color: white;
+        padding-bottom: 10px;
+        width: 98%;
+        border-radius: 5px;
+    }
+
+    h2 {
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1rem;
+        text-align: center;
+        background-color: #55459c;
+        color: white;
+        padding: 10px;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .main-section img {
+        width: 200px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 5px;
+    }
+
+    .filter-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+        flex-wrap: nowrap;
+        padding-bottom: .5rem;
+        border-bottom: 2px solid gray;
+    }
+
+    .filter-buttons button {
+        width: 5rem;
+        padding: .4rem 2rem .4rem 2rem;
+        border: none;
+        background-color: #47378c;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .filter-buttons button:hover {
+        background-color: black;
+    }
+
+    .course-list {
+        display: flex;
+        flex-flow: column;
+        gap: 10px;
+        justify-items: center;
+        align-items: center;
+        list-style: none;
+        margin-top: 15px;
+        padding-left: 1%;
+    }
+
+    .course-list li {
+        margin-bottom: 2px;
+        width: 80%;
+        padding: .5rem;
+        border: none;
+        background-color: #55459c;
+        font-family: "Prompt", sans-serif;
+        font-size: .8rem;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .course-list li.finished {
+        background-color: #b4a3ff;
+        color: black;
+
+    }
+
+    .course-list li.finished::before {
+        content: "✔ ";
+    }
+
+
+    footer {
+        text-align: center;
+        background-image: linear-gradient(#55459c, #403577);
+        padding: .1rem;
+        color: white;
+        margin: .5rem;
+        border-radius: 5px;
+    }
+
+    footer span {
+        font-size: .6rem;
+    }
+}
+
 @media (min-width: 600px) {
     :root {
         margin: auto;
@@ -79,7 +301,7 @@
         text-decoration: overline;
         font-family: "Prompt", sans-serif;
         transform: scale(.8);
-        transition: transform 1s ease;
+        transition: transform 0.3s ease;
     }
 
     h2 {
@@ -127,33 +349,35 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 10px;
-        margin-top: 10px;
+        gap: 1rem;
+        margin: 1rem 0;
         flex-wrap: nowrap;
-        padding-bottom: .5rem;
-        border-bottom: 4px solid gray;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid gray;
     }
 
     .filter-buttons button {
         width: 12rem;
-        padding: .2rem 1rem;
+        padding: .5rem 1rem;
         border: none;
         background-color: #55459c;
         color: #fff;
         cursor: pointer;
         border-radius: 4px;
-        transition: background-color 1s ease;
+        transition: background-color 0.3s ease;
     }
 
     .filter-buttons button:hover {
-        background-color: black;
+        background-color: white;
+        color: black;
+        border: 1px solid #55459c;
     }
 
     .course-list {
         display: grid;
-        grid-template-columns: 30% 30% 30%;
-        gap: 1rem;
-        margin: 2rem 1rem;
+        grid-template-columns: 33% 33% 33%;
+        gap: .5rem;
+        margin: 2rem;
         justify-items: center;
         align-items: center;
         list-style: none;
@@ -164,11 +388,11 @@
         font-family: "Prompt", sans-serif;
         font-size: 1rem;
         font-weight: 600;
-        margin-bottom: 5px;
-        width: 10rem;
+        margin-bottom: .5rem;
+        width: 15rem;
         padding: 1rem 0;
         border: none;
-        background-color: #55459c;
+        background-color: #483b7f;
         color: #fff;
         cursor: pointer;
         border-radius: 4px;
@@ -196,4 +420,15 @@
     .course-list li.finished::before {
         content: "✔ ";
     }
+}
+
+.course-work li {
+    list-style: none;
+    font-family: "Prompt", sans-serif;
+    margin-bottom: 1rem;
+}
+
+.course-work a {
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }

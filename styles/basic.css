@@ -1,0 +1,343 @@
+:root {
+    line-height: .5rem;
+    --heading-font: "Prompt", sans-serif;
+    --text-font: "Roboto", sans-serif;
+    --light-background: #E6E6FA;
+    --normal-background: #7851a9;
+    --dark-background: #55459c;
+    text-align: center;
+}
+
+body {
+    width: 100%;
+    min-width: 300px;
+    max-width: 580px;
+    margin: auto;
+    padding: 0;
+}
+
+.course-work li,
+.course-work a,
+.course-list li,
+section p,
+button {
+    color: black;
+    font-family: var(--text-font);
+    font-size: .8rem;
+    line-height: 1.5rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+.course-work li {
+    text-align: left;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+
+h2 {
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    background-color: var(--dark-background);
+    color: white;
+    padding: .5rem;
+    line-height: 1.2rem;
+    border-radius: 5px 5px 0 0;
+    margin-top: 0;
+}
+
+.heading {
+    background-image: linear-gradient(#403577, #55459c);
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    border-radius: 5px;
+}
+
+.heading img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    border: .5px black solid;
+    box-shadow: .2rem .2rem .2rem rgb(43, 43, 43);
+    margin: .5rem;
+
+}
+
+.heading span {
+    font-family: var(--heading-font);
+    color: white;
+    font-size: 1rem;
+    padding: .5rem;
+}
+
+#menu {
+    border: 0;
+    background-color: transparent;
+    color: #ffffff;
+    position: absolute;
+    top: .5%;
+    right: 3%;
+}
+
+#menu::before {
+    content: "☰";
+    display: inline-block;
+}
+
+#menu.open::before {
+    content: "✖";
+}
+
+.navbar {
+    display: none;
+}
+
+#menu.open+.navbar {
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    background-color: var(--light-background);
+    color: black;
+    border-radius: 5px;
+}
+
+#menu.open+.navbar a {
+    color: black;
+    font-family: var(--text-font);
+    font-size: .8rem;
+    line-height: 1.2rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+nav a:hover {
+    font-size: 1.2rem;
+    text-decoration: overline;
+    font-family: var(--heading-font);
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+#menu.open+nav a:hover {
+    font-size: 1.2rem;
+    text-decoration: overline;
+    transform: scale(.8);
+    transition: transform 1s ease;
+}
+
+.nav-link.active {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.nav-link.active::before {
+    content: " 💜";
+}
+
+section {
+    margin: auto;
+    padding: 0;
+    background-color: white;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px black solid;
+    margin-bottom: 1rem;
+}
+
+.main-section img {
+    width: 260px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    padding-top: .5rem;
+}
+
+.filter-buttons {
+    padding: .5rem;
+    border-bottom: 1px solid gray;
+}
+
+
+.filter-buttons button {
+    width: 5rem;
+    padding: .2rem 0;
+    border: none;
+    background-color: var(--light-background);
+    color: #000;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.filter-buttons button:hover {
+    background-color: #47378c;
+    color: #fff;
+    border: 1px solid black;
+}
+
+.course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+}
+
+.course-list li {
+    border: 1px solid black;
+    margin-bottom: 2px;
+    width: 80%;
+    padding: 0.4rem;
+    background-color: white;
+    font-family: var(--text-font);
+    font-size: 0.8rem;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.course-list li.finished {
+    background-color: var(--normal-background);
+    color: white;
+}
+
+.course-list li.finished::before {
+    content: "✔  ";
+}
+
+footer {
+    text-align: center;
+    background-image: linear-gradient(#55459c, #403577);
+    border-radius: 5px;
+    padding: 1px;
+}
+
+footer p,
+footer span {
+    color: white;
+    font-family: var(--text-font);
+    font-size: .6rem;
+    line-height: .3rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* -- Bigger screens */
+@media (min-width: 600px) {
+    body {
+        width: 100%;
+        min-width: 580px;
+        max-width: 1200px;
+    }
+
+    .course-work li,
+    .course-work a,
+    .course-list li,
+    section p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin: 2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        padding: 1rem 0;
+    }
+
+    .heading img {
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+        border: 1px black solid;
+        box-shadow: .4rem .4rem .4rem rgb(43, 43, 43);
+        margin: 1rem;
+
+    }
+
+    .heading span {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navbar {
+        padding: .5rem 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: var(--light-background);
+        margin-top: -.1rem;
+        border-radius: 0 0 5px 5px;
+    }
+
+    nav a {
+        font-family: var(--heading-font);
+        text-decoration: none;
+        font-weight: 600;
+        color: black;
+        padding: 1rem;
+        border-radius: 5px;
+        font-size: 1.2rem;
+    }
+
+    .main-section {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        gap: .5rem;
+        margin: 2rem 1rem;
+        align-items: stretch;
+    }
+
+    .main-section section {
+        height: 280px;
+    }
+
+    .main-section img {
+        padding-top: 1.5rem;
+    }
+
+    .filter-buttons button {
+        font-size: 1.2rem;
+        font-family: var(--heading-font);
+        margin: 0 1rem;
+        width: 10rem;
+        padding: .5rem 0;
+    }
+
+
+    .course-list li {
+        font-size: 1.2rem;
+    }
+
+    .certificate {
+        margin-bottom: 2rem;
+    }
+
+    footer p,
+    footer span {
+        font-size: 1rem;
+        line-height: .8rem;
+    }
+}
