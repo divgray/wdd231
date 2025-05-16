@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Create Course List Items
     const courses = [
         { code: "CSE 110", credits: 2 },
         { code: "WDD 130", credits: 2 },
@@ -39,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         courseListElement.appendChild(li);
     });
 
-    // Finished courses.
     document.querySelectorAll('#course-list li').forEach(item => {
         const code = item.getAttribute('data-code');
         if (finishedCourses.includes(code)) {
@@ -47,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Filter buttons
     const filterButtons = document.querySelectorAll('.filter-buttons button');
 
     filterButtons.forEach(button => {

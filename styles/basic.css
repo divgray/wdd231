@@ -242,7 +242,7 @@ footer span {
 }
 
 /* -- Bigger screens */
-@media (min-width: 680px) {
+@media (min-width: 601px) {
     body {
         width: 100%;
         min-width: 600px;
