@@ -237,6 +237,12 @@ footer span {
     text-decoration: none;
 }
 
+/* .active {
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: underline;
+} */
+
 /* -- Bigger screens */
 @media (min-width: 601px) {
     body {
