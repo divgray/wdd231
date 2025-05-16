@@ -45,6 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    const calculateFinishedCredits = () => {
+        const finishedCredits = finishedCourses
+            .map(code => courses.find(course => course.code === code)?.credits || 0)
+            .reduce((acc, credits) => acc + credits, 0);
+        document.getElementById('total-credits').textContent = finishedCredits;
+    };
+    calculateFinishedCredits();
+
+
+
     const filterButtons = document.querySelectorAll('.filter-buttons button');
 
     filterButtons.forEach(button => {
