@@ -1,4 +1,5 @@
 :root {
+    background-color: #000;
     line-height: .5rem;
     --heading-font: "Prompt", sans-serif;
     --text-font: "Roboto", sans-serif;
@@ -25,12 +26,7 @@ button {
     font-family: var(--text-font);
     font-size: .8rem;
     line-height: 1.5rem;
-    list-style: none;
     text-decoration: none;
-}
-
-.main-section p {
-    line-height: 1rem;
 }
 
 .course-work li {
@@ -39,6 +35,7 @@ button {
 
 h1 {
     font-family: var(--heading-font);
+    color: #ffffff;
     text-align: left;
     padding-left: 1rem;
     font-size: 1rem;
@@ -51,7 +48,6 @@ h2 {
     color: white;
     padding: .5rem;
     line-height: 1.2rem;
-    border-radius: 5px 5px 0 0;
     margin-top: 0;
 }
 
@@ -61,7 +57,6 @@ h2 {
     align-items: center;
     flex-direction: row;
     display: flex;
-    border-radius: 5px;
 }
 
 .heading img {
@@ -111,7 +106,6 @@ h2 {
     list-style: none;
     background-color: var(--light-background);
     color: black;
-    border-radius: 5px;
 }
 
 #menu.open+.navbar a {
@@ -153,13 +147,12 @@ section {
     padding: 0;
     background-color: white;
     width: 90%;
-    border-radius: 5px;
     border: 1px black solid;
     margin-bottom: 1rem;
 }
 
 .main-section img {
-    width: 260px;
+    width: 250px;
     height: auto;
     display: block;
     margin: auto;
@@ -174,13 +167,13 @@ section {
 
 .filter-buttons button {
     width: 5rem;
-    padding: .2rem 0;
+    padding: 2px 0;
     border: none;
     background-color: var(--light-background);
     color: #000;
     border: 1px solid black;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
@@ -204,14 +197,12 @@ section {
     border: 1px solid black;
     margin-bottom: 2px;
     width: 80%;
-    padding: 0.4rem;
     background-color: white;
     font-family: var(--text-font);
     font-size: 0.8rem;
     text-align: center;
     color: black;
     cursor: pointer;
-    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
@@ -227,7 +218,6 @@ section {
 footer {
     text-align: center;
     background-image: linear-gradient(#55459c, #403577);
-    border-radius: 5px;
     padding: 1px;
 }
 
@@ -306,11 +296,11 @@ footer span {
     }
 
     .main-section {
-        display: grid;
-        grid-template-columns: 60% 40%;
-        gap: .5rem;
-        margin: 1rem 1.5rem;
-        align-items: stretch;
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        gap: 1rem;
+        margin: 2rem;
     }
 
     .main-section section {
