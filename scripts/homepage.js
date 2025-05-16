@@ -81,11 +81,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const anchor = document.createElement("a");
         anchor.href = course.url;
         anchor.textContent = course.name;
-
-        if (course.name === "Course Homepage") {
+        if (course.url === "https://divgray.github.io/wdd231/") {
             anchor.classList.add("active");
         }
-
         li.appendChild(anchor);
         courseWorkList.appendChild(li);
     });
