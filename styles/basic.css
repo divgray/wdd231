@@ -287,7 +287,7 @@ footer span {
         padding: .5rem 0;
         display: flex;
         justify-content: space-around;
-        background-color: var(--light-background);
+        background-color: white;
         margin-top: -.1rem;
         border-radius: 0 0 5px 5px;
     }
