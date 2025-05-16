@@ -29,6 +29,10 @@ button {
     text-decoration: none;
 }
 
+.main-section p {
+    line-height: 1rem;
+}
+
 .course-work li {
     text-align: left;
 }
@@ -160,7 +164,6 @@ section {
     display: block;
     margin: auto;
     border-radius: 5px;
-    padding-top: .5rem;
 }
 
 .filter-buttons {
@@ -306,16 +309,12 @@ footer span {
         display: grid;
         grid-template-columns: 60% 40%;
         gap: .5rem;
-        margin: 2rem 1rem;
+        margin: 1rem 1.5rem;
         align-items: stretch;
     }
 
     .main-section section {
         height: 280px;
-    }
-
-    .main-section img {
-        padding-top: 1.5rem;
     }
 
     .filter-buttons button {
