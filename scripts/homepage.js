@@ -81,6 +81,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const anchor = document.createElement("a");
         anchor.href = course.url;
         anchor.textContent = course.name;
+
+        if (course.name === "Course Homepage") {
+            anchor.classList.add("active");
+        }
+
         li.appendChild(anchor);
         courseWorkList.appendChild(li);
     });
