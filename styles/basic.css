@@ -1,5 +1,4 @@
 :root {
-    background-color: var(--light-background);
     line-height: .5rem;
     --heading-font: "Prompt", sans-serif;
     --text-font: "Roboto", sans-serif;
@@ -44,7 +43,7 @@ h1 {
     font-family: var(--heading-font);
     color: black;
     text-align: left;
-    padding-left: 1rem;
+    padding: 1rem;
     font-size: 1rem;
 }
 
