@@ -138,14 +138,16 @@ nav a:hover {
     transition: transform 1s ease;
 }
 
-.nav-link.active {
+.nav-link.active,
+.active {
     background-color: white;
     border-radius: 5px;
     border: 1px solid black;
 }
 
-.nav-link.active::before {
-    content: " 💜";
+.nav-link.active::before,
+.active::before {
+    content: "💜 ";
 }
 
 section {
