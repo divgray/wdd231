@@ -1,16 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-
-    const hamButton = document.querySelector('#menu');
-    const navigation = document.querySelector('.navbar');
-
-    hamButton.addEventListener('click', () => {
-        navigation.classList.toggle('open');
-        hamButton.classList.toggle('open');
+document.addEventListener("DOMContentLoaded", () => {
+    // Hamburger
+    const hamButton = document.getElementById("menu");
+    const navigation = document.querySelector(".navbar");
+    hamButton.addEventListener("click", () => {
+        hamButton.classList.toggle("open");
+        navigation.classList.toggle("open");
     });
 
-    document.getElementById('currentyear').textContent = new Date().getFullYear();
-    document.getElementById('lastModified').textContent = "Last Modified: " + document.lastModified;
+    // footer
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
 
+    // Active link
     document.querySelectorAll(".nav-link").forEach(link => {
         if (link.href === window.location.href) {
             link.classList.add("active");
@@ -26,56 +27,39 @@ document.addEventListener('DOMContentLoaded', () => {
         { code: "WDD 131", credits: 2 },
         { code: "WDD 231", credits: 2 }
     ];
-
     const finishedCourses = ['CSE 110', 'CSE 111', 'WDD 130', 'WDD 131'];
-    const courseListElement = document.getElementById('course-list');
-
+    const courseListElement = document.getElementById("course-list");
     courses.forEach(course => {
-        const li = document.createElement('li');
+        const li = document.createElement("li");
         li.className = "course-item";
-        li.setAttribute('data-code', course.code);
+        li.dataset.code = course.code;
         li.textContent = `${course.code} - ${course.credits} credits`;
+        if (finishedCourses.includes(course.code)) {
+            li.classList.add("finished");
+        }
         courseListElement.appendChild(li);
     });
 
-    document.querySelectorAll('#course-list li').forEach(item => {
-        const code = item.getAttribute('data-code');
-        if (finishedCourses.includes(code)) {
-            item.classList.add('finished');
-        }
-    });
+    const finishedCredits = courses
+        .filter(course => finishedCourses.includes(course.code))
+        .reduce((acc, course) => acc + course.credits, 0);
+    document.getElementById("total-credits").textContent = finishedCredits;
 
-    const calculateFinishedCredits = () => {
-        const finishedCredits = finishedCourses
-            .map(code => courses.find(course => course.code === code)?.credits || 0)
-            .reduce((acc, credits) => acc + credits, 0);
-        document.getElementById('total-credits').textContent = finishedCredits;
-    };
-    calculateFinishedCredits();
-
-
-
-    const filterButtons = document.querySelectorAll('.filter-buttons button');
-
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const filterType = this.textContent.trim();
-
-            const courseListItems = document.querySelectorAll('#course-list li');
-            courseListItems.forEach(item => {
-                if (filterType === 'All' || item.getAttribute('data-code').startsWith(filterType)) {
-                    item.style.display = 'list-item';
-                } else {
-                    item.style.display = 'none';
-                }
+    // button filter
+    document.querySelectorAll(".filter-buttons button").forEach(button => {
+        button.addEventListener("click", () => {
+            const filterType = button.textContent.trim();
+            document.querySelectorAll("#course-list li").forEach(item => {
+                item.style.display =
+                    filterType === "All" || item.dataset.code.startsWith(filterType)
+                        ? "list-item"
+                        : "none";
             });
         });
     });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-    // add the other links here later.
-    const courses = [
+    // coursework link
+    const courseWorks = [
         { name: "Course Homepage", url: "https://divgray.github.io/wdd231/" },
         { name: "Chamber Directory Page", url: "#" },
         { name: "Chamber Home Page", url: "#" },
@@ -85,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
     const courseWorkList = document.getElementById("course-work-list");
     courseWorkList.innerHTML = "";
-    courses.forEach(course => {
+    courseWorks.forEach(course => {
         const li = document.createElement("li");
         const anchor = document.createElement("a");
         anchor.href = course.url;
