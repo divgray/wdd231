@@ -66,8 +66,9 @@ h2 {
 }
 
 .heading img {
-    width: 50px;
+    width: 10%;
     height: auto;
+    aspect-ratio: 2 / 2;
     border-radius: 50%;
     border: .5px black solid;
     box-shadow: .2rem .2rem .2rem rgb(43, 43, 43);
@@ -160,8 +161,9 @@ section {
 }
 
 .main-section img {
-    width: 250px;
+    width: 80%;
     height: auto;
+    aspect-ratio: 3 / 2;
     display: block;
     margin: auto;
     border-radius: 5px;
@@ -272,10 +274,6 @@ footer span {
     }
 
     .heading img {
-        width: 100px;
-        height: auto;
-        border-radius: 50%;
-        border: 1px black solid;
         box-shadow: .4rem .4rem .4rem rgb(43, 43, 43);
         margin: 1rem;
 
