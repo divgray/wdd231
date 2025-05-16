@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener("DOMContentLoaded", () => {
     // add the other links here later.
     const courses = [
-        { name: "Course Homepage", url: "https://divgray.github.io/wdd231/", class: ".active" },
+        { name: "Course Homepage", url: "https://divgray.github.io/wdd231/", class: "active" },
         { name: "Chamber Directory Page", url: "#" },
         { name: "Chamber Home Page", url: "#" },
         { name: "Chamber Join Page", url: "#" },
