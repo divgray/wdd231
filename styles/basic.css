@@ -1,5 +1,5 @@
 :root {
-    background-color: #000;
+    background-color: var(--light-background);
     line-height: .5rem;
     --heading-font: "Prompt", sans-serif;
     --text-font: "Roboto", sans-serif;
@@ -29,13 +29,20 @@ button {
     text-decoration: none;
 }
 
+section p {
+    font-family: var(--text-font);
+    font-size: .8rem;
+    margin-top: -.1rem;
+
+}
+
 .course-work li {
     text-align: left;
 }
 
 h1 {
     font-family: var(--heading-font);
-    color: #ffffff;
+    color: black;
     text-align: left;
     padding-left: 1rem;
     font-size: 1rem;
@@ -300,7 +307,7 @@ footer span {
         display: flex;
         justify-content: space-around;
         gap: 1rem;
-        margin: 2rem;
+        margin: auto;
     }
 
     .main-section section {
