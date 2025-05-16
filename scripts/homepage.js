@@ -63,10 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
 document.addEventListener("DOMContentLoaded", () => {
+    // add the other links here later.
     const courses = [
-        { name: "Course Homepage", url: "index.html" },
+        { name: "Course Homepage", url: "https://divgray.github.io/wdd231/", class: ".active" },
         { name: "Chamber Directory Page", url: "#" },
         { name: "Chamber Home Page", url: "#" },
         { name: "Chamber Join Page", url: "#" },
@@ -75,26 +75,11 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
     const courseWorkList = document.getElementById("course-work-list");
     courseWorkList.innerHTML = "";
-
-    // Determine the current page based on the URL
-    let currentPage;
-    if (window.location.pathname === "/" || window.location.pathname.endsWith("/")) {
-        currentPage = "index.html";
-    } else {
-        currentPage = window.location.pathname.split("/").pop();
-    }
-
     courses.forEach(course => {
         const li = document.createElement("li");
         const anchor = document.createElement("a");
         anchor.href = course.url;
         anchor.textContent = course.name;
-
-        // Add active class if the course URL matches the current page
-        if (course.url === currentPage) {
-            anchor.classList.add("active");
-        }
-
         li.appendChild(anchor);
         courseWorkList.appendChild(li);
     });
