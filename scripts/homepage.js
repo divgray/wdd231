@@ -62,3 +62,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // add the other links here later.
+    const courses = [
+        { name: "Course Homepage", url: "https://divgray.github.io/wdd231/" },
+        { name: "Chamber Directory Page", url: "#" },
+        { name: "Chamber Home Page", url: "#" },
+        { name: "Chamber Join Page", url: "#" },
+        { name: "Chamber Discover Page", url: "#" },
+        { name: "Individual Website Project", url: "#" },
+    ];
+    const courseWorkList = document.getElementById("course-work-list");
+    courseWorkList.innerHTML = "";
+    courses.forEach(course => {
+        const li = document.createElement("li");
+        const anchor = document.createElement("a");
+        anchor.href = course.url;
+        anchor.textContent = course.name;
+        li.appendChild(anchor);
+        courseWorkList.appendChild(li);
+    });
+});
