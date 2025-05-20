@@ -1,8 +1,4 @@
-/* Global Styles */
 :root {
-    --heading-font: "Montserrat", sans-serif;
-    --h2: "Prompt", sans-serif;
-    --text-font: "Roboto", sans-serif;
     --light-background: rgb(255, 255, 240);
     --dark-background: rgb(255, 215, 0);
     --gray-background: rgb(225, 225, 225);
@@ -25,23 +21,13 @@ body {
     overflow-x: hidden;
 }
 
-@font-face {
-    font-family: "Montserrat";
-    src: url('Montserrat.woff2') format('woff2');
-    font-display: swap;
-}
-
 @media (max-width: 600px) {
-
-    /* Make header a relative container and keep its flex layout for the logo, middle, and hamburger */
     header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        /* vertically centers items */
         position: relative;
-        /* for absolutely positioned nav */
         width: 100%;
         background-color: var(--gray-background);
     }
@@ -54,7 +40,6 @@ body {
         background-color: transparent;
     }
 
-    /* Ensure your logo and middle elements have appropriate sizes */
     #logo {
         width: 80px;
         height: 80px;
@@ -63,7 +48,7 @@ body {
     }
 
     #middle {
-        font-family: var(--heading-font);
+        font-family: "Montserrat", sans-serif;
         font-size: 1.2rem;
         font-weight: bolder;
         color: var(--text-color);
@@ -72,7 +57,6 @@ body {
         margin-left: 1rem;
     }
 
-    /* Default styling for the nav: hide it */
     nav {
         display: none;
     }
@@ -98,20 +82,17 @@ body {
         content: "✖";
     }
 
-    /* Position the navbar absolutely so it sits below header */
+    /* Position the navbar absolute so it sits below header */
     nav.navbar {
         position: absolute;
         top: 100%;
-        /* position below header */
         left: 0;
         width: 100%;
         display: none;
-        /* default to hidden */
         flex-direction: column;
         background-color: var(--light-background);
         color: black;
         padding: 0.5rem;
-        /* adjust padding as desired */
     }
 
     /* When the hamburger is open, display the navbar */
@@ -119,7 +100,6 @@ body {
         display: flex;
     }
 
-    /* Navbar link styling */
     nav.navbar ul {
         list-style: none;
         padding: 0;
@@ -132,17 +112,15 @@ body {
 
     nav.navbar ul li a {
         color: black;
-        font-family: var(--h2);
+        font-family: "Prompt", sans-serif;
         font-weight: bold;
         font-size: 0.8rem;
         text-decoration: none;
         padding: .5rem 1rem;
     }
 
-    /* Adjust hover styles if needed */
     nav.navbar a:hover {
         font-size: 1.2rem;
-        text-decoration: overline;
         transform: scale(1.1);
         transition: transform 0.3s ease;
     }
@@ -154,7 +132,7 @@ body {
     }
 
     h1 {
-        font-family: var(--heading-font);
+        font-family: "Montserrat", sans-serif;
         font-size: 1.5rem;
         text-align: center;
         padding: 1rem;
@@ -207,9 +185,11 @@ body {
         margin-bottom: 1rem;
         display: flex;
         flex-direction: column;
+        max-height: 450px;
+        min-height: 200px;
     }
 
-    /* For grid view, stick with a vertical layout */
+    /* For grid view, stick with a vertical (column) layout */
     #memberContainer.grid .member-card {
         flex-direction: column;
     }
@@ -221,8 +201,8 @@ body {
 
     /* Image Styles */
     .member-card img {
-        width: 80px;
-        height: auto;
+        width: 60px;
+        height: 60px;
         display: block;
         align-self: center;
         padding: 1rem;
@@ -239,13 +219,13 @@ body {
     }
 
     .member-info h2 {
-        font-family: var(--h2);
+        font-family: "Prompt", sans-serif;
         margin: 0 0 10px;
         font-size: 1.5rem;
     }
 
     .member-info p {
-        font-family: var(--text-font);
+        font-family: "Roboto", sans-serif;
         margin: 5px 0;
         line-height: 1.4;
         font-size: 1rem;
@@ -253,7 +233,8 @@ body {
 
     .member-info a {
         color: darkblue;
-        text-decoration: none;
+        text-decoration: underline;
+        text-underline-offset: .1rem;
         font-size: 1rem;
     }
 
@@ -262,19 +243,17 @@ body {
     }
 
     footer {
-        font-family: var(--text-font);
+        font-family: "Roboto", sans-serif;
         font-size: .8rem;
-        line-height: 1rem;
-        width: 100%;
         background-color: var(--gray-background);
-        padding: 1rem;
-        margin-top: 1rem;
+        padding: .5rem;
+        height: 280px;
     }
 
     #social-icons img {
         padding-right: .5rem;
         height: 40px;
-        width: auto;
+        width: 40px;
     }
 
 }
@@ -305,7 +284,7 @@ body {
     }
 
     header span {
-        font-family: var(--heading-font);
+        font-family: "Montserrat", sans-serif;
         font-size: 1.5rem;
         font-weight: bolder;
         width: 100%;
@@ -326,7 +305,7 @@ body {
         font-size: 1.2rem;
         padding: .5rem;
         list-style: none;
-        font-family: var(--h2);
+        font-family: "Prompt", sans-serif;
     }
 
     header a {
@@ -336,7 +315,6 @@ body {
     }
 
     .active-link {
-        text-underline-offset: .3rem;
         border-radius: 5px;
         box-shadow: var(--box-shadow);
         padding: .2rem .5rem;
@@ -349,7 +327,7 @@ body {
     }
 
     h1 {
-        font-family: var(--heading-font);
+        font-family: "Montserrat", sans-serif;
         text-align: center;
         padding: 1rem;
         background-color: white;
@@ -369,7 +347,7 @@ body {
         background-color: white;
         box-shadow: var(--box-shadow);
         font-size: 1.5rem;
-        margin-bottom: 5rem;
+        margin-bottom: 3rem;
         cursor: pointer;
         transition: background-color 0.3s;
     }
@@ -379,7 +357,6 @@ body {
     }
 
     /* Main */
-
     #memberContainer {
         width: 90%;
         margin: auto;
@@ -406,6 +383,9 @@ body {
         margin-bottom: 1rem;
         display: flex;
         flex-direction: column;
+        max-height: 450px;
+        min-height: 200px;
+
     }
 
     /* For grid view, stick with a vertical layout */
@@ -420,8 +400,8 @@ body {
 
     /* Image Styles */
     .member-card img {
-        width: 100px;
-        aspect-ratio: 2 / 2;
+        width: 80px;
+        height: 80px;
         height: auto;
         display: block;
         align-self: center;
@@ -439,13 +419,13 @@ body {
     }
 
     .member-info h2 {
-        font-family: var(--h2);
+        font-family: "Prompt", sans-serif;
         margin: 0 0 10px;
         font-size: 1.5rem;
     }
 
     .member-info p {
-        font-family: var(--text-font);
+        font-family: "Roboto", sans-serif;
         margin: 5px 0;
         line-height: 1.4;
         font-size: 1rem;
@@ -462,9 +442,8 @@ body {
     }
 
     footer {
-        font-family: var(--text-font);
+        font-family: "Roboto", sans-serif;
         font-size: .8rem;
-        line-height: .8rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -473,7 +452,7 @@ body {
         width: 100%;
         background-color: var(--gray-background);
         padding-left: 1rem;
-
+        height: 120px;
     }
 
     .footer-info {
@@ -487,9 +466,9 @@ body {
     }
 
     #social-icons img {
-        padding-right: .5rem;
+        padding-right: 1rem;
         height: 60px;
-        width: auto;
+        width: 60px;
     }
 }
 
@@ -500,8 +479,4 @@ h2 {
 
 h1 {
     background-color: transparent;
-}
-
-footer {
-    min-height: 200px;
 }

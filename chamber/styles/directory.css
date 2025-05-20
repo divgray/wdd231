@@ -247,6 +247,7 @@ body {
         font-size: .8rem;
         background-color: var(--gray-background);
         padding: .5rem;
+        height: 280px;
     }
 
     #social-icons img {
@@ -443,7 +444,6 @@ body {
     footer {
         font-family: "Roboto", sans-serif;
         font-size: .8rem;
-        line-height: .8rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -452,7 +452,7 @@ body {
         width: 100%;
         background-color: var(--gray-background);
         padding-left: 1rem;
-
+        height: 120px;
     }
 
     .footer-info {
@@ -466,7 +466,7 @@ body {
     }
 
     #social-icons img {
-        padding-right: .5rem;
+        padding-right: 1rem;
         height: 60px;
         width: 60px;
     }
@@ -479,9 +479,4 @@ h2 {
 
 h1 {
     background-color: transparent;
-}
-
-footer {
-    min-height: 200px;
-    max-height: 300px;
 }
