@@ -59,6 +59,7 @@ nav {
     background-color: white;
     color: black;
     font-size: 1.2rem;
+    border-radius: 5px;
     border: 2px solid var(--dark-background);
     box-shadow: var(--box-shadow);
     margin: 1rem;
