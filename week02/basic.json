@@ -1,0 +1,24 @@
+{
+    "family-name": {
+        "date-moved": "",
+        "family-number": 0,
+        "visited": true,
+        "individual": [
+            {
+                "name": "",
+                "gender": "",
+                "birthday": ""
+            },
+            {
+                "name": "",
+                "gender": "",
+                "birthday": ""
+            },
+            {
+                "name": "",
+                "gender": "",
+                "birthday": ""
+            }
+        ]
+    }
+}

@@ -95,6 +95,7 @@ h2 {
 #menu::before {
     content: "☰";
     display: inline-block;
+    font-size: 1rem vr;
 }
 
 #menu.open::before {
@@ -113,9 +114,10 @@ h2 {
     list-style: none;
     background-color: var(--light-background);
     color: black;
+    margin-top: -.5rem;
 }
 
-#menu.open+.navbar a {
+#menu.open+ul.navbar a {
     color: black;
     font-family: var(--text-font);
     font-size: .8rem;
@@ -140,14 +142,14 @@ nav a:hover {
 }
 
 .nav-link.active,
-.active {
+.activelink {
     background-color: white;
     border-radius: 5px;
     border: 1px solid black;
 }
 
 .nav-link.active::before,
-.active::before {
+.activelink::before {
     content: "💜 ";
 }
 
@@ -290,7 +292,8 @@ footer span {
         display: none;
     }
 
-    .navbar {
+    .navbar,
+    #menu.open+.navbar {
         padding: .5rem 0;
         display: flex;
         justify-content: space-around;
