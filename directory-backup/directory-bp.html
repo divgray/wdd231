@@ -17,18 +17,11 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://divgray.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
-    <!-- Preload directory.css -->
-    <link rel="preload" href="styles/directory.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="styles/directory.css">
-    </noscript>
-    <!-- Preload directory-larger.css -->
-    <link rel="preload" href="styles/directory-larger.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="styles/directory-larger.css">
-    </noscript>
 
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
+    <link rel="stylesheet" href="styles/directory.css">
+    <!-- <link rel="stylesheet" href="styles/larger.css"> -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,9 +30,6 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Prompt:wght@400;600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <script src="scripts/directory.js" defer></script>
-    <script src="scripts/hamburger.js" defer></script>
-
-</head>
 </head>
 
 <body>
@@ -48,7 +38,7 @@
         <span id="middle">Metropolitan Manila Commerce</span>
         <button type="button" id="ham"></button>
         <nav class="navbar">
-            <ul>
+            <ul id="alwaysright">
                 <li><a href="#">Home</a></li>
                 <li><a class="active-link" href="directory.html">Directory</a></li>
                 <li><a href="#">Join</a></li>
@@ -67,26 +57,23 @@
     </main>
 
     <footer>
-        <div>
-            <p><b>Metropolitan Manila Business Commerce</b></p>
-            <p>Metro Manila Philippines </p>
+        <div class="footer-info">
+            <p><b>Metro Manila Business Commerce</b></p>
+            <p>Metropolitan Manila Philippines </p>
             <p><a href="#">metropolitan-info.org</a></p>
             <p><a href="#">(+639) 123-123-1234</a></p>
         </div>
-        <div>
+        <div id="social-icons">
             <img src="images/facebook.webp" loading="lazy" alt="Facebook icon">
             <img src="images/youtube.webp" loading="lazy" alt="Youtube icon">
+
         </div>
-        <div>
+        <div id="student-info">
             <p>WDD231 Class Project</p>
             <p>Divya Ali Priya Giray</p>
             <p>&copy; <span id="currentyear"></span> Metro Manila Commerce</p>
             <p id="lastModified"></p>
         </div>
-        <script>
-            document.getElementById("currentyear").textContent = new Date().getFullYear();
-            document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
-        </script>
     </footer>
 </body>
 

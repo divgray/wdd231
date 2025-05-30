@@ -9,9 +9,11 @@ body {
     margin: auto;
     padding: 0;
     overflow-x: hidden;
-    min-width: 300px;
-    max-width: 1600px;
     background-color: white;
+}
+
+main {
+    min-height: 800px;
 }
 
 header {
@@ -26,7 +28,7 @@ header {
 
 #logo,
 #middle,
-#alwaysright {
+.navbar {
     width: 100%;
     height: auto;
     background-color: transparent;
@@ -45,7 +47,6 @@ header {
     font-weight: bolder;
     color: var(--text-color);
     flex-grow: 1;
-    /* Allow middle to take up available space */
     margin-left: 1rem;
 }
 
@@ -128,6 +129,12 @@ h1 {
     font-family: "Montserrat", sans-serif;
     font-size: 1.3rem;
     text-align: center;
+    padding: 2rem;
+}
+
+h1,
+h2 {
+    color: var(--text-color);
 }
 
 .controls {
@@ -156,12 +163,6 @@ h1 {
     margin: auto;
     padding: 0;
 }
-
-/* #memberContainer.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-} */
 
 #memberContainer.list {
     display: block;
@@ -245,79 +246,19 @@ footer {
     font-family: "Roboto", sans-serif;
     font-size: .8rem;
     background-color: var(--gray-background);
-    padding: .5rem;
-    height: 280px;
+    height: 200px;
+    line-height: .4rem;
+    padding-top: 1px;
 }
 
-#social-icons img {
-    padding-right: .5rem;
-    height: 40px;
-    width: 40px;
+footer img {
+    padding-right: 0 .5rem;
+    height: 30px;
+    width: 30px;
 }
 
-@media (min-width: 600px) {
-    header {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        width: 100%;
-        height: auto;
-        background-color: var(--gray-background);
-    }
-
-    nav.navbar {
-        display: flex;
-        position: static;
-        flex-direction: row;
-        background-color: transparent;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-
-    #ham {
-        display: none;
-    }
-
-    .member-card img {
-        width: 80px;
-        height: 80px;
-    }
-
-    footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        width: 100%;
-        padding-left: 1rem;
-        height: 100px;
-    }
-
-    .footer-inf,
-    #student-info {
-        align-self: center;
-        width: auto;
-    }
-
-    #social-icons img {
-        height: 60px;
-        width: 60px;
-    }
-}
-
-@media (min-width: 800px) {
-    #memberContainer.grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-h1,
-h2 {
-    color: var(--text-color);
+footer a {
+    color: black;
+    font-size: .9rem;
+    line-height: .8rem;
 }

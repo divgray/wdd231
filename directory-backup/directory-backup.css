@@ -1,0 +1,482 @@
+:root {
+    --light-background: rgb(255, 255, 240);
+    --dark-background: rgb(255, 215, 0);
+    --gray-background: rgb(225, 225, 225);
+    --text-color: rgb(70, 40, 0);
+    --box-shadow: rgba(0, 0, 0, 0.5) 4px 3px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-width: 300px;
+    max-width: 1600px;
+    height: auto;
+    margin: auto;
+    padding: 0;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+@media (max-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        background-color: var(--gray-background);
+    }
+
+    #logo,
+    #middle,
+    #alwaysright {
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+    }
+
+    #logo {
+        width: 80px;
+        height: 80px;
+        margin: 1rem 0 1rem 1rem;
+        border-radius: 50%;
+    }
+
+    #middle {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.2rem;
+        font-weight: bolder;
+        color: var(--text-color);
+        flex-grow: 1;
+        /* Allow middle to take up available space */
+        margin-left: 1rem;
+    }
+
+    nav {
+        display: none;
+    }
+
+    /* Hamburger styling */
+    #ham {
+        border: 0;
+        background-color: white;
+        color: black;
+        font-size: 1.2rem;
+        border: 2px solid var(--dark-background);
+        box-shadow: var(--box-shadow);
+        margin: 1rem;
+        padding: .6rem 1rem;
+    }
+
+    #ham::before {
+        content: "☰";
+        display: inline-block;
+    }
+
+    #ham.open::before {
+        content: "✖";
+    }
+
+    /* Position the navbar absolute so it sits below header */
+    nav.navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        background-color: var(--light-background);
+        color: black;
+        padding: 0.5rem;
+    }
+
+    /* When the hamburger is open, display the navbar */
+    #ham.open+nav.navbar {
+        display: flex;
+    }
+
+    nav.navbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav.navbar ul li {
+        margin-bottom: 1rem;
+    }
+
+    nav.navbar ul li a {
+        color: black;
+        font-family: "Prompt", sans-serif;
+        font-weight: bold;
+        font-size: 0.8rem;
+        text-decoration: none;
+        padding: .5rem 1rem;
+    }
+
+    nav.navbar a:hover {
+        font-size: 1.2rem;
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+
+    .active-link {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: var(--box-shadow);
+    }
+
+    h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .controls {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+    }
+
+    .controls button {
+        padding: .8rem 1.2rem;
+        border-radius: 5px;
+        border: none;
+        background-color: var(--light-background);
+        box-shadow: var(--box-shadow);
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .controls button:hover {
+        background-color: var(--dark-background);
+    }
+
+    #memberContainer {
+        width: 90%;
+        margin: auto;
+        padding: 0;
+    }
+
+    #memberContainer.grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    #memberContainer.list {
+        display: block;
+    }
+
+    /* Member Card Styles */
+    .member-card {
+        background-color: #fff;
+        border: 2px solid var(--dark-background);
+        box-shadow: var(--box-shadow);
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        max-height: 450px;
+        min-height: 200px;
+    }
+
+    /* For grid view, stick with a vertical (column) layout */
+    #memberContainer.grid .member-card {
+        flex-direction: column;
+    }
+
+    /* For list view, change to a horizontal (row) layout */
+    #memberContainer.list .member-card {
+        flex-direction: row;
+    }
+
+    /* Image Styles */
+    .member-card img {
+        width: 60px;
+        height: 60px;
+        display: block;
+        align-self: center;
+        padding: 1rem;
+    }
+
+    /* Adjust image for list view */
+    #memberContainer.list .member-card img {
+        display: none;
+    }
+
+    /* Member Information Styles */
+    .member-info {
+        padding: 15px;
+    }
+
+    .member-info h2 {
+        font-family: "Prompt", sans-serif;
+        margin: 0 0 10px;
+        font-size: 1.5rem;
+    }
+
+    .member-info p {
+        font-family: "Roboto", sans-serif;
+        margin: 5px 0;
+        line-height: 1.4;
+        font-size: 1rem;
+    }
+
+    .member-info a {
+        color: darkblue;
+        text-decoration: underline;
+        text-underline-offset: .1rem;
+        font-size: 1rem;
+    }
+
+    .member-info a:hover {
+        text-decoration: underline;
+    }
+
+    footer {
+        font-family: "Roboto", sans-serif;
+        font-size: .8rem;
+        background-color: var(--gray-background);
+        padding: .5rem;
+        height: 280px;
+    }
+
+    #social-icons img {
+        padding-right: .5rem;
+        height: 40px;
+        width: 40px;
+    }
+
+}
+
+@media (min-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        background-color: var(--gray-background);
+    }
+
+    #logo,
+    #middle,
+    #alwaysright {
+        width: 100%;
+        height: auto;
+    }
+
+    #logo {
+        width: 100px;
+        height: 100px;
+        padding: .5rem 1rem;
+        border-radius: 50%;
+    }
+
+    header span {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding: 0;
+        text-align: left;
+        color: var(--text-color);
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    header li {
+        font-size: 1.2rem;
+        padding: .5rem;
+        list-style: none;
+        font-family: "Prompt", sans-serif;
+    }
+
+    header a {
+        text-align: right;
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    .active-link {
+        border-radius: 5px;
+        box-shadow: var(--box-shadow);
+        padding: .2rem .5rem;
+        background-color: white;
+
+    }
+
+    #ham {
+        display: none;
+    }
+
+    h1 {
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        padding: 1rem;
+        background-color: white;
+    }
+
+    .controls {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+    }
+
+    .controls button {
+        padding: .5rem 1rem;
+        border-radius: 5px;
+        border: none;
+        background-color: white;
+        box-shadow: var(--box-shadow);
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .controls button:hover {
+        background-color: var(--light-background);
+    }
+
+    /* Main */
+    #memberContainer {
+        width: 90%;
+        margin: auto;
+        padding: 0;
+    }
+
+    #memberContainer.grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+
+    #memberContainer.list {
+        display: block;
+    }
+
+    /* Member Card Styles */
+    .member-card {
+        background-color: #fff;
+        border: 2px solid var(--dark-background);
+        box-shadow: var(--box-shadow);
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        max-height: 450px;
+        min-height: 200px;
+
+    }
+
+    /* For grid view, stick with a vertical layout */
+    #memberContainer.grid .member-card {
+        flex-direction: column;
+    }
+
+    /* For list view, change to a horizontal (row) layout */
+    #memberContainer.list .member-card {
+        flex-direction: row;
+    }
+
+    /* Image Styles */
+    .member-card img {
+        width: 80px;
+        height: 80px;
+        height: auto;
+        display: block;
+        align-self: center;
+        padding: 1rem;
+    }
+
+    /* Rubrick says no picture on list view */
+    #memberContainer.list .member-card img {
+        display: none;
+    }
+
+    /* Member Information Styles */
+    .member-info {
+        padding: 15px;
+    }
+
+    .member-info h2 {
+        font-family: "Prompt", sans-serif;
+        margin: 0 0 10px;
+        font-size: 1.5rem;
+    }
+
+    .member-info p {
+        font-family: "Roboto", sans-serif;
+        margin: 5px 0;
+        line-height: 1.4;
+        font-size: 1rem;
+    }
+
+    .member-info a {
+        color: darkblue;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    .member-info a:hover {
+        text-decoration: underline;
+    }
+
+    footer {
+        font-family: "Roboto", sans-serif;
+        font-size: .8rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        background-color: var(--gray-background);
+        padding-left: 1rem;
+        height: 120px;
+    }
+
+    .footer-info {
+        align-self: center;
+        width: auto;
+    }
+
+    #student-info {
+        align-self: center;
+        width: auto;
+    }
+
+    #social-icons img {
+        padding-right: 1rem;
+        height: 60px;
+        width: 60px;
+    }
+}
+
+h1,
+h2 {
+    color: var(--text-color);
+}
+
+h1 {
+    background-color: transparent;
+}

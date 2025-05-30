@@ -1,0 +1,46 @@
+@media (min-width: 600px) {
+    nav.navbar {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        justify-content: end;
+        background-color: transparent;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    #ham {
+        display: none;
+    }
+
+    .member-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        padding-left: 1rem;
+        line-height: .5rem;
+        height: 100px;
+    }
+
+    footer p,
+    footer a {
+        align-self: center;
+        width: auto;
+    }
+}
+
+@media (min-width: 800px) {
+    #memberContainer.grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
