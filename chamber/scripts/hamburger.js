@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const hamButton = document.getElementById("ham");
-    const navigation = document.querySelector("nav");
 
     hamButton.addEventListener("click", () => {
         hamButton.classList.toggle("open");
-        navigation.classList.toggle("open");
+        // The adjacent sibling rule takes care of showing/hiding the nav
     });
 });

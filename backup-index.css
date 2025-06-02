@@ -1,0 +1,255 @@
+:root,
+body {
+    --light-background: rgb(255, 255, 240);
+    --dark-background: rgb(255, 215, 0);
+    --gray-background: rgb(225, 225, 225);
+    --text-color: rgb(70, 40, 0);
+    --box-shadow: rgba(0, 0, 0, 0.5) 4px 3px;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+main {
+    min-height: 500px;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    font-family: "Prompt", sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    background: rgb(225, 225, 225, 0.8);
+    border-radius: 5px;
+}
+
+.hero-text h1 {
+    font-size: 1.2rem;
+}
+
+.hero-text p {
+    font-size: .8rem;
+}
+
+#calltoaction {
+    padding: 0.5rem 1rem;
+    /* Bright color for the button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 4px 3px;
+}
+
+#calltoaction a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    background-color: var(--gray-background);
+}
+
+header img,
+header span,
+.navbar {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+
+header span {
+    font-family: "Prompt", sans-serif;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-left: 1rem;
+    flex-grow: 1;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+    margin: 1rem 0 1rem 1rem;
+    border-radius: 50%;
+}
+
+nav {
+    display: none;
+}
+
+/* Hamburger styling */
+#ham {
+    border: 0;
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 2px solid var(--dark-background);
+    box-shadow: var(--box-shadow);
+    margin: 1rem;
+    padding: .6rem 1rem;
+}
+
+#ham::before {
+    content: "☰";
+    display: inline-block;
+}
+
+#ham.open::before {
+    content: "✖";
+}
+
+/* Position the navbar absolute so it sits below header */
+nav.navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    background-color: var(--light-background);
+    color: black;
+    padding: 0.5rem;
+}
+
+/* When the hamburger is open, display the navbar */
+#ham.open+nav.navbar {
+    display: flex;
+}
+
+nav.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav.navbar ul li {
+    margin-bottom: 1rem;
+}
+
+nav.navbar ul li a {
+    color: black;
+    font-family: "Prompt", sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-decoration: none;
+    padding: .5rem 1rem;
+}
+
+nav.navbar a:hover {
+    font-size: 1.2rem;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.active-link {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+
+
+footer {
+    font-family: "Roboto", sans-serif;
+    font-size: .8rem;
+    background-color: var(--gray-background);
+    height: 220px;
+    line-height: .4rem;
+    padding-top: 1px;
+}
+
+footer img {
+    padding-right: .5rem;
+    height: 30px;
+    width: 30px;
+}
+
+footer a {
+    color: black;
+    font-size: .9rem;
+    line-height: .8rem;
+}
+
+footer {
+    font-family: "Roboto", sans-serif;
+    font-size: .8rem;
+    background-color: var(--gray-background);
+    height: 220px;
+    line-height: .4rem;
+    padding-top: 1px;
+}
+
+footer img {
+    padding-right: .5rem;
+    height: 30px;
+    width: 30px;
+}
+
+footer a {
+    color: black;
+    font-size: .9rem;
+    line-height: .8rem;
+}
+
+h2 {
+    font-family: "Prompt", sans-serif;
+    font-size: 1rem;
+}
+
+.weather {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.weather p#current-temp {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.weather figure {
+    margin: 0 auto;
+    max-width: 200px;
+}
+
+.weather img#weather-icon {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.weather figcaption {
+    font-size: 1rem;
+    color: #555;
+}

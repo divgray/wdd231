@@ -9,37 +9,48 @@
     <meta name="description" content="Homepage of the WDD231 Chamber Project.">
     <meta name="keywords" content="Rizal, Chamber, Directory">
 
-    <meta property="og:title" content="Timbuktu Chamber of Commerce">
+    <meta property="og:title" content="Metropolitan Manila Chamber of Commerce">
     <meta property="og:description"
         content="This website will serve as a resource hub for businesses in the city of Timbuktu. The site will provide information on local events, host networking opportunities, create business directories, and encourage local shopping. It aims to promote local economic growth, support local businesses, and foster a sense of community between the businesses.">
-    <meta property="og:image" content="">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/divgray/wdd231/refs/heads/main/chamber/images/logo.png">
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://divgray.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
 
-    <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
-    <link rel="stylesheet" href="styles/index.css">
-    <!-- <link rel="stylesheet" href="styles/larger.css"> -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preload" href="styles/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="styles/index.css">
+    </noscript>
+    <link rel="preload" href="styles/index-large.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="styles/index-large.css">
+    </noscript>
+    <link rel="stylesheet" href="styles/hamburger.css">
+    <link rel="stylesheet" href="styles/footer.css">
 
-    <script src="scripts/footer.js" defer></script>
-    <script type="module" src="scripts/index.js" defer></script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Prompt:wght@400;600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
+
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/hamburger.js" defer></script>
 </head>
 
 <body>
     <header>
         <img src="images/logo.webp" alt="Metro Manila Chamber of Commerce Logo">
         <span>Metropolitan Manila Commerce</span>
-        <button id="ham"></button>
-        <nav id="navbar">
+        <button id="ham" aria-label="menuItem"></button>
+        <nav class="navbar">
             <ul>
-                <li><a class="active-link" href="index.html">Homepage</a></li>
+                <li><a class="active-link" href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Discover</a></li>
@@ -50,23 +61,90 @@
     <main>
         <div class="hero">
             <img src="images/photo-ph.jpg" width="100%" height="auto" loading="lazy" alt="metro manila">
-            <button id="calltoaction"><a href="">Join Us Now!</a></button>
+            <div class="hero-text">
+                <h1>Join the Business Commerce Today!</h1>
+                <p>
+                    Become part of a dynamic network dedicated to driving innovation and growth in the world of
+                    commerce.
+                    Together, we're shaping the future of
+                    business
+                    excellence.
+                </p>
+                <button id="calltoaction"><a href="join.html"><b>Join Now!</b></a></button>
+            </div>
         </div>
+        <div class="afterhero">
+            <h2>Current Events:</h2>
+            <section class="current-events">
+                <article class="event">
+                    <h3>Annual Business Forum</h3>
+                    <img src="images/forum.webp" alt="Local business forum." loading="lazy">
+                    <p>Join industry leaders as they explore future business trends. <strong>Date:</strong> July 15,
+                        2025.</p>
+                </article>
+                <article class="event">
+                    <h3>Networking Luncheon</h3>
+                    <img src="images/luncheon.webp" alt="Business luncheon gathering" loading="lazy">
+                    <p>Connect as you dine with local professionals at our monthly networking event.
+                        <strong>Date:</strong> August
+                        10, 2025.
+                    </p>
+                </article>
+            </section>
+            <h2>Local Weather:</h2>
+            <section class="weather">
+                <p id="current-date">Loading date. . . . .</p>
+                <!-- These elements will be updated dynamically using your JavaScript file -->
+                <p id="current-temp">Loading temperature...</p>
+                <p id="wind">Loading wind info...</p>
+                <figure>
+                    <img id="weather-icon" src="" alt="Weather icon" />
+                    <figcaption id="weather-desc">Loading weather description...</figcaption>
+                </figure>
+                <div id="forecast">
+                    Loading forecast...
+                </div>
+            </section>
+            <h2>Company Spotlights:</h2>
+            <section class="company-spotlights">
+                <div class="spotlight">
+                    <img src="images/company1.webp" alt="TDT Powersteel Corporation Logo" />
+                    <h3>TDT Powersteel Corporation</h3>
+                    <p>Pioneering solutions for tomorrow’s challenges—discover their innovative projects.</p>
+                </div>
+                <div class="spotlight">
+                    <img src="images/company4.webp" alt="Luminaire Printing & Publishing Corp Logo" />
+                    <h3>Luminaire Printing & Publishing Corp.</h3>
+                    <p>Leading the change in sustainable business practices—learn about their eco-friendly initiatives.
+                    </p>
+                </div>
+                <div class="spotlight">
+                    <img src="images/company7.webp" alt="Lindela Travel & Tours Logo" />
+                    <h3>Lindela Travel & Tours</h3>
+                    <p>Your trusted traveling companion to experience growth and adventure.</p>
+                </div>
+            </section>
 
-        <section class="currentEvent"></section>
-
-
-        <section class="weather"></section>
-
-
-        <div id="spotlight">
         </div>
     </main>
 
     <footer>
-        <p>&copy; <span id="currentyear"></span> 🌸 Divya Ali Priya Giray 🌸 Rizal, Philippines</p>
-        <p id="lastModified"></p>
-        </section>
+        <div>
+            <p><b>Metropolitan Manila Business Commerce</b></p>
+            <p>Metro Manila, Philippines </p>
+            <p><a href="#">metropolitan-info.org</a></p>
+            <p><a href="#">(+639) 123-123-1234</a></p>
+        </div>
+        <!-- <div> -->
+        <img src="images/facebook.webp" loading="lazy" alt="Facebook icon">
+        <img src="images/youtube.webp" loading="lazy" alt="Youtube icon">
+        <!-- </div> -->
+        <div>
+            <p><b>WDD231 Class Project</b></p>
+            <p>Divya Ali Priya Giray</p>
+            <p>&copy; <b><span id="currentyear"></span> Metro Manila Commerce</b></p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 </body>
 
