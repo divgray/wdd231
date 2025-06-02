@@ -1,13 +1,11 @@
-@media (max-width: 600px) {
-
+/* @media (max-width: 600px) {
     button#calltoaction a {
         padding: 14px;
-        /* Increase padding further for mobile devices if needed */
         margin: 10px;
     }
-}
+} */
 
-/* @media (min-width: 600px) {
+@media (min-width: 600px) {
     .hero-text {
         width: 500px;
         height: auto;
@@ -53,4 +51,4 @@
         padding: 1.5rem 2rem;
         font-size: 1.5rem;
     }
-} */
+}
