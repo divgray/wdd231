@@ -100,12 +100,12 @@ header img {
     box-shadow: rgba(0, 0, 0, 0.5) 4px 3px;
 }
 
-#calltoaction a {
+.hero-text a {
     font-size: 1rem;
     text-decoration: none;
     color: var(--text-color);
     font-weight: bold;
-    padding: .5rem;
+    padding: 1rem;
 
 }
 
