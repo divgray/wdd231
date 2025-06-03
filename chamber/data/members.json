@@ -1,65 +1,67 @@
-[
-    {
-        "name": "TDT Powersteel Corporation",
-        "address": "1017 Vicente Cruz St. Sampaloc Manila, Metro Manila, Philippines",
-        "phone": "+632 88310000",
-        "website": "",
-        "image": "images/company1.webp",
-        "membership": 3,
-        "description": "Quality steel products, competitive prices, exceptional service, fast delivery."
-    },
-    {
-        "name": "Primefactor Realty Philippines",
-        "address": "U-2206, 22/F Entrata Tower 1, Civic Drive, Filinvest City, Metro Manila, Philippines",
-        "phone": "+63 2 7746 9651",
-        "website": "",
-        "image": "images/company2.webp",
-        "membership": 2,
-        "description": "Industrial and commercial real estate solutions in Metro Manila."
-    },
-    {
-        "name": "Peak Outsourcing Philippines",
-        "address": "8741 Paseo de Roxas 18F, Makati City, Metro Manila, Philippines",
-        "phone": "+1 833 831 7325",
-        "website": "",
-        "image": "images/company3.webp",
-        "membership": 1,
-        "description": "Reliable BPO with a focus on trustworthy, skilled agents."
-    },
-    {
-        "name": "Luminaire Printing & Publishing Corp.",
-        "address": "8333 Dr. A. Santos Avenue, Paranaque City, Metro Manila, Philippines",
-        "phone": "(632) 7238 3511",
-        "website": "",
-        "image": "images/company4.webp",
-        "membership": 3,
-        "description": "Quality large format printing with fast quotes and services."
-    },
-    {
-        "name": "KG Consult Group Inc.",
-        "address": "Unit 1402, 88 Corporate Center, Valero corner Sedeño St, Salcedo Village, Makati City, Metro Manila, Philippines",
-        "phone": "632 7752 1049",
-        "website": "",
-        "image": "images/company5.webp",
-        "membership": 2,
-        "description": "Comprehensive support for MSMEs and startups in the Philippines."
-    },
-    {
-        "name": "Studio 116 Dance School",
-        "address": "Suite 135-B Ground Floor, LRI Plaza 210, Nicanor Garcia Street, Bel-Air II, 1209, Makati City, Metro Manila, Philippines",
-        "phone": "+63 2 895 5581",
-        "website": "",
-        "image": "images/company6.webp",
-        "membership": 1,
-        "description": "Learn to dance for fun, fitness, and competition."
-    },
-    {
-        "name": "Lindela Travel & Tours",
-        "address": "3rd Floor Valero One Center, 102 Valero St., Salcedo Village, Makati City, Metro Manila, Philippines",
-        "phone": "+63 9177131236",
-        "website": "",
-        "image": "images/company7.webp",
-        "membership": 3,
-        "description": "Reliable travel services with expert visa consulting and support."
-    }
-]
+{
+    "members": [
+        {
+            "name": "TDT Powersteel Corporation",
+            "address": "1017 Vicente Cruz St. Sampaloc Manila, Metro Manila, Philippines",
+            "phone": "+632 88310000",
+            "website": "",
+            "image": "images/company1.webp",
+            "membership": 3,
+            "description": "Quality steel products, competitive prices, exceptional service, fast delivery."
+        },
+        {
+            "name": "Primefactor Realty Philippines",
+            "address": "U-2206, 22/F Entrata Tower 1, Civic Drive, Filinvest City, Metro Manila, Philippines",
+            "phone": "+63 2 7746 9651",
+            "website": "",
+            "image": "images/company2.webp",
+            "membership": 2,
+            "description": "Industrial and commercial real estate solutions in Metro Manila."
+        },
+        {
+            "name": "Peak Outsourcing Philippines",
+            "address": "8741 Paseo de Roxas 18F, Makati City, Metro Manila, Philippines",
+            "phone": "+1 833 831 7325",
+            "website": "",
+            "image": "images/company3.webp",
+            "membership": 1,
+            "description": "Reliable BPO with a focus on trustworthy, skilled agents."
+        },
+        {
+            "name": "Luminaire Printing & Publishing Corp.",
+            "address": "8333 Dr. A. Santos Avenue, Paranaque City, Metro Manila, Philippines",
+            "phone": "(632) 7238 3511",
+            "website": "",
+            "image": "images/company4.webp",
+            "membership": 3,
+            "description": "Quality large format printing with fast quotes and services."
+        },
+        {
+            "name": "KG Consult Group Inc.",
+            "address": "Unit 1402, 88 Corporate Center, Valero corner Sedeño St, Salcedo Village, Makati City, Metro Manila, Philippines",
+            "phone": "632 7752 1049",
+            "website": "",
+            "image": "images/company5.webp",
+            "membership": 2,
+            "description": "Comprehensive support for MSMEs and startups in the Philippines."
+        },
+        {
+            "name": "Studio 116 Dance School",
+            "address": "Suite 135-B Ground Floor, LRI Plaza 210, Nicanor Garcia Street, Bel-Air II, 1209, Makati City, Metro Manila, Philippines",
+            "phone": "+63 2 895 5581",
+            "website": "",
+            "image": "images/company6.webp",
+            "membership": 1,
+            "description": "Learn to dance for fun, fitness, and competition."
+        },
+        {
+            "name": "Lindela Travel & Tours",
+            "address": "3rd Floor Valero One Center, 102 Valero St., Salcedo Village, Makati City, Metro Manila, Philippines",
+            "phone": "+63 9177131236",
+            "website": "",
+            "image": "images/company7.webp",
+            "membership": 3,
+            "description": "Reliable travel services with expert visa consulting and support."
+        }
+    ]
+}
