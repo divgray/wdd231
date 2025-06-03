@@ -1,0 +1,148 @@
+:root {
+    --light-background: rgb(255, 255, 240);
+    --dark-background: rgb(255, 215, 0);
+    --gray-background: rgb(225, 225, 225);
+    --text-color: rgb(70, 40, 0);
+    --box-shadow: rgba(0, 0, 0, 0.5) 4px 3px;
+}
+
+#ham {
+    border: 0;
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 2px solid var(--dark-background);
+    box-shadow: var(--box-shadow);
+    margin: 1rem;
+    padding: .6rem 1rem;
+}
+
+#ham::before {
+    content: "☰";
+    display: inline-block;
+}
+
+#ham.open::before {
+    content: "✖";
+}
+
+/* Position the navbar absolute so it sits below header */
+nav.navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    background-color: var(--light-background);
+    color: black;
+    padding: 0.5rem;
+    z-index: 1000;
+    /* brings item to the front */
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    /* Animate opacity and transform */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* When the hamburger is open, display the navbar */
+#ham.open+nav.navbar {
+    display: flex;
+    border: 2px solid var(--dark-background);
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+nav.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav.navbar ul li {
+    margin-bottom: 1rem;
+}
+
+nav.navbar ul li a {
+    color: black;
+    font-family: "Prompt", sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: .5rem 1rem;
+}
+
+nav.navbar a:hover {
+    font-size: 1.2rem;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.active-link {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+@media (min-width: 600px) {
+    nav.navbar {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: end;
+        background-color: transparent;
+        opacity: 1;
+        margin-top: 3rem;
+        z-index: 1000;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav.navbar a {
+        pointer-events: auto;
+    }
+
+    #ham {
+        display: none;
+    }
+}
+
+/* header styling coz im lazy copy pasting */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    background-color: var(--gray-background);
+}
+
+header img,
+header span,
+.navbar {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+
+header span {
+    font-family: "Prompt", sans-serif;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-left: 1rem;
+    flex-grow: 1;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+    margin: 1rem 0 1rem 1rem;
+    border-radius: 50%;
+}

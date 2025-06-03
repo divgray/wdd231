@@ -16,8 +16,8 @@
     <meta property="og:url" content="">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/join-header.css">
+    <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -30,24 +30,172 @@
 
 </head>
 
-<body>
+<body onload="setTimestamp()">
     <header>
-
+        <img src="images/logo.webp" alt="Metro Manila Chamber of Commerce Logo">
+        <span>Metropolitan Manila Commerce</span>
+        <button id="ham" aria-label="menuItem"></button>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" class="active-link">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
     </header>
-
     <main>
+        <h2>Join Our Chamber Membership</h2>
+        <div class="container">
+            <section class="form-container">
+                <form method="get" action="thankyou.html">
+                    <label for="first-name">
+                        First Name:
+                        <input type="text" id="first-name" name="first-name" title="Enter your first name" required
+                            autocomplete="given-name">
+                    </label>
+                    <label for="last-name">
+                        Last Name:
+                        <input type="text" id="last-name" name="last-name" title="Enter your last name" required
+                            autocomplete="family-name">
+                    </label>
+                    <label for="org-title">
+                        Organizational Title:
+                        <input type="text" id="org-title" name="org-title" title="Enter your organizational title"
+                            required autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                    </label>
+                    <label for="email">
+                        Email Address:
+                        <input type="email" id="email" name="email" title="Enter your email address" required
+                            autocomplete="email" placeholder="example@example.com">
+                    </label>
+                    <label for="mobile">
+                        Mobile Phone Number:
+                        <input type="tel" id="mobile" name="mobile" title="Enter your mobile phone number" required
+                            autocomplete="tel">
+                    </label>
+                    <label for="business-name">
+                        Business/Organization Name:
+                        <input type="text" id="business-name" name="business-name"
+                            title="Enter your business or organization name" required autocomplete="organization">
+                    </label>
+                    <fieldset>
+                        <legend>Membership Level</legend>
+                        <label>
+                            <input type="radio" name="membership" value="NP Membership" required>
+                            NP Membership (Non-Profit – No Fee)
+                        </label>
+                        <label>
+                            <input type="radio" name="membership" value="Bronze Membership">
+                            Bronze Membership
+                        </label>
+                        <label>
+                            <input type="radio" name="membership" value="Silver Membership">
+                            Silver Membership
+                        </label>
+                        <label>
+                            <input type="radio" name="membership" value="Gold Membership">
+                            Gold Membership
+                        </label>
+                    </fieldset>
+                    <label for="description">
+                        Business/Organization Description:
+                        <textarea id="description" name="description"
+                            title="Enter a brief description of your organization"></textarea>
+                    </label>
+                    <input type="hidden" id="timestamp" name="timestamp" value="">
+                    <input type="submit" value="Submit Membership Application">
+                </form>
+            </section>
 
+            <aside class="cards-container">
+                <div class="membership-card">
+                    <h3>NP Membership</h3>
+                    <p>Ideal for non-profit organizations.</p>
+                    <a href="#" onclick="openModal('modalNP'); return false;">View Benefits</a>
+                </div>
+                <div class="membership-card">
+                    <h3>Bronze Membership</h3>
+                    <p>Basic membership with essential benefits.</p>
+                    <a href="#" onclick="openModal('modalBronze'); return false;">View Benefits</a>
+                </div>
+                <div class="membership-card">
+                    <h3>Silver Membership</h3>
+                    <p>Enhanced benefits for growing organizations.</p>
+                    <a href="#" onclick="openModal('modalSilver'); return false;">View Benefits</a>
+                </div>
+                <div class="membership-card">
+                    <h3>Gold Membership</h3>
+                    <p>Premium benefits and exclusive access.</p>
+                    <a href="#" onclick="openModal('modalGold'); return false;">View Benefits</a>
+                </div>
+            </aside>
+        </div>
+
+        <div id="modalNP" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modalNP')">&times;</span>
+                <h2>NP Membership Benefits</h2>
+                <ul>
+                    <li>No membership fee</li>
+                    <li>Access to non-profit events</li>
+                    <li>Networking opportunities</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="modalBronze" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modalBronze')">&times;</span>
+                <h2>Bronze Membership Benefits</h2>
+                <ul>
+                    <li>Basic membership card</li>
+                    <li>Newsletter subscription</li>
+                    <li>Event discounts</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="modalSilver" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modalSilver')">&times;</span>
+                <h2>Silver Membership Benefits</h2>
+                <ul>
+                    <li>All Bronze benefits</li>
+                    <li>Spotlight on events homepage</li>
+                    <li>Priority support</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="modalGold" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modalGold')">&times;</span>
+                <h2>Gold Membership Benefits</h2>
+                <ul>
+                    <li>All Silver benefits</li>
+                    <li>Exclusive training sessions</li>
+                    <li>Customized advertising</li>
+                </ul>
+            </div>
+        </div>
     </main>
-
     <footer>
-        <p>&copy; <span id="currentyear"></span> 🤍 Divya Ali Priya Giray 🤍 Rizal, Philippines</p>
-        <p id="lastModified"></p>
+        <div>
+            <p><b>Metropolitan Manila Business Commerce</b></p>
+            <p>Metro Manila, Philippines </p>
+            <p><a href="#">metropolitan-info.org</a></p>
+            <p><a href="#">(+639) 123-123-1234</a></p>
+        </div>
+        <img src="images/facebook.webp" loading="lazy" alt="Facebook icon">
+        <img src="images/youtube.webp" loading="lazy" alt="Youtube icon">
+        <div>
+            <p><b>WDD231 Class Project</b></p>
+            <p>Divya Ali Priya Giray</p>
+            <p>&copy; <b><span id="currentyear"></span> Metro Manila Commerce</b></p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
-
-    <script>
-        document.getElementById('currentyear').textContent = new Date().getFullYear();
-        document.getElementById('lastModified').textContent = "Last Modified: " + document.lastModified;
-    </script>
 </body>
 
 </html>
