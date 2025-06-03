@@ -23,6 +23,13 @@
         transform: scale(1.1);
         transition: transform 0.3s ease;
     }
+
+    .current-events section,
+    .weather section,
+    .company-spotlights section {
+        width: 600px;
+        height: auto;
+    }
 }
 
 @media (min-width: 1000px) {
@@ -55,5 +62,22 @@
     #calltoaction a {
         font-size: 1.2rem;
         font-family: "Roboto", sans-serif;
+    }
+
+    .current-events section,
+    .weather section,
+    .company-spotlights section {
+        width: 900px;
+        height: auto;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .current-events section,
+    .weather section,
+    .company-spotlights section {
+        width: 1000px;
+        height: auto;
     }
 }
