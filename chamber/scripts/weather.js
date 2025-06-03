@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         } catch (error) {
             console.error("Error fetching forecast:", error);
-            forecastContainer.innerHTML = `<p>Error loading forecast data.</p>`;
+            forecastContainer.innerHTML = `<p>Error loading forecast data. Please check your internet.</p>`;
         }
     }
 

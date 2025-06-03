@@ -32,11 +32,9 @@ nav.navbar {
     padding: 0.5rem;
     z-index: 1000;
     /* brings item to the front */
-
     opacity: 0;
     transform: translateY(-20px);
     pointer-events: none;
-
     /* Animate opacity and transform */
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -64,7 +62,7 @@ nav.navbar ul li a {
     color: black;
     font-family: "Prompt", sans-serif;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-decoration: none;
     padding: .5rem 1rem;
 }

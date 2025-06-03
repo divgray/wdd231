@@ -1,28 +1,21 @@
-/* @media (max-width: 600px) {
-    button#calltoaction a {
-        padding: 14px;
-        margin: 10px;
-    }
-} */
-
 @media (min-width: 600px) {
     .hero-text {
-        width: 500px;
-        height: auto;
+        padding: 2rem;
+        width: 400px;
+        height: 200px;
+        line-height: 1.4rem;
     }
 
-
     .hero-text h1 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .hero-text p {
         font-size: 1rem;
     }
 
-    #calltoaction a {
-        font-size: 1.5rem;
-        padding: 1rem 1.5rem;
+    #calltoaction {
+        padding: .8rem 1.2rem;
     }
 
     #calltoaction a:hover {
@@ -35,20 +28,32 @@
 @media (min-width: 1000px) {
     .hero-text {
         width: 800px;
-        height: auto;
+        height: 260px;
+        line-height: 2rem;
     }
-
 
     .hero-text h1 {
         font-size: 2rem;
     }
 
-    .hero-text p {
-        font-size: 1.5rem;
+    h2 {
+        font-size: 1.6rem;
     }
 
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    #calltoaction {
+        padding: 1rem 1.5rem;
+    }
+
+    .spotlight p,
+    .current-events p,
+    .weather p,
+    .hero-text p,
     #calltoaction a {
-        padding: 1.5rem 2rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        font-family: "Roboto", sans-serif;
     }
 }

@@ -12,57 +12,13 @@ body {
 }
 
 main {
-    min-height: 500px;
+    min-height: 800px;
 }
 
-.hero {
-    position: relative;
-    overflow: hidden;
-}
-
-.hero img {
-    display: block;
+.afterhero {
+    min-height: 1000px;
     width: 100%;
-    height: auto;
-}
-
-.hero-text {
-    font-family: "Prompt", sans-serif;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
-    text-align: center;
-    padding: 1rem;
-    background: rgb(225, 225, 225, 0.8);
-    border-radius: 5px;
-}
-
-.hero-text h1 {
-    font-size: 1.2rem;
-}
-
-.hero-text p {
-    font-size: .8rem;
-}
-
-#calltoaction {
-    padding: 0.5rem 1rem;
-    /* Bright color for the button */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: rgb(255, 255, 255);
-    padding: .5rem 1rem;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.5) 4px 3px;
-}
-
-#calltoaction a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
+    margin-bottom: 2rem;
 }
 
 header {
@@ -99,157 +55,266 @@ header img {
     border-radius: 50%;
 }
 
-nav {
-    display: none;
+
+.hero {
+    position: relative;
+    overflow: hidden;
 }
 
-/* Hamburger styling */
-#ham {
-    border: 0;
-    background-color: white;
-    color: black;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    border: 2px solid var(--dark-background);
-    box-shadow: var(--box-shadow);
-    margin: 1rem;
-    padding: .6rem 1rem;
+.hero img {
+    display: block;
+    width: 100vw;
+    height: auto;
 }
 
-#ham::before {
-    content: "☰";
-    display: inline-block;
-}
-
-#ham.open::before {
-    content: "✖";
-}
-
-/* Position the navbar absolute so it sits below header */
-nav.navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    background-color: var(--light-background);
-    color: black;
-    padding: 0.5rem;
-}
-
-/* When the hamburger is open, display the navbar */
-#ham.open+nav.navbar {
-    display: flex;
-}
-
-nav.navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav.navbar ul li {
-    margin-bottom: 1rem;
-}
-
-nav.navbar ul li a {
-    color: black;
+.hero-text {
     font-family: "Prompt", sans-serif;
-    font-weight: bold;
-    font-size: 0.8rem;
-    text-decoration: none;
-    padding: .5rem 1rem;
-}
-
-nav.navbar a:hover {
-    font-size: 1.2rem;
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
-.active-link {
-    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-align: center;
+    padding: 0 1rem;
+    background: rgb(225, 225, 225, 0.8);
     border-radius: 5px;
-    box-shadow: var(--box-shadow);
-}
-
-
-
-footer {
-    font-family: "Roboto", sans-serif;
-    font-size: .8rem;
-    background-color: var(--gray-background);
-    height: 220px;
-    line-height: .4rem;
-    padding-top: 1px;
-}
-
-footer img {
-    padding-right: .5rem;
-    height: 30px;
-    width: 30px;
-}
-
-footer a {
-    color: black;
-    font-size: .9rem;
+    width: 260px;
+    height: 150px;
     line-height: .8rem;
 }
 
-footer {
-    font-family: "Roboto", sans-serif;
-    font-size: .8rem;
-    background-color: var(--gray-background);
-    height: 220px;
-    line-height: .4rem;
-    padding-top: 1px;
-}
-
-footer img {
-    padding-right: .5rem;
-    height: 30px;
-    width: 30px;
-}
-
-footer a {
-    color: black;
+.hero-text h1 {
     font-size: .9rem;
-    line-height: .8rem;
 }
+
+.hero-text p {
+    font-size: .8rem;
+}
+
+#calltoaction {
+    padding: .5rem;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid yellow;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 4px 3px;
+}
+
+#calltoaction a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    padding: .5rem;
+
+}
+
 
 h2 {
     font-family: "Prompt", sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin: 2.5rem 0 1rem 1rem
 }
 
 .weather {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background-color: var(--gray-background, #f2f2f2);
+    border: 1px solid var(--dark-background, #333);
+    border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 600px;
+    font-family: "Roboto", sans-serif;
+    color: black;
+}
+
+#current-date {
+    font-size: 1rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 }
 
-.weather p#current-temp {
-    font-size: 1.5rem;
+#current-temp {
+    font-size: 2rem;
     font-weight: bold;
+    text-align: center;
+    margin: 0.5rem 0;
+    color: var(--primary-color, #000);
 }
 
-.weather figure {
-    margin: 0 auto;
-    max-width: 200px;
-}
-
-.weather img#weather-icon {
-    max-width: 100%;
-    height: auto;
+#weather-icon {
     display: block;
     margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    background-color: white;
+    margin-bottom: .5rem;
 }
 
-.weather figcaption {
+#weather-desc {
+    text-align: center;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: var(--secondary-text, #555);
+}
+
+#wind {
+    text-align: center;
     font-size: 1rem;
-    color: #555;
+    color: var(--secondary-text, #555);
+    margin-top: 0.5rem;
+}
+
+#forecast {
+    margin-top: 2rem;
+}
+
+.forecast-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.forecast-day {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.75rem;
+    text-align: center;
+    flex: 0 0 auto;
+    min-width: 110px;
+}
+
+.forecast-day p:first-of-type {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--primary-text, #333);
+}
+
+.forecast-day img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+}
+
+.forecast-day p:last-of-type {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-color, #000);
+}
+
+h3 {
+    font-family: "Prompt", sans-serif;
+    font-size: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: .5rem;
+    background-color: white;
+}
+
+.current-events {
+    border: 1px solid var(--dark-background);
+    background-color: var(--light-background);
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.current-events>* {
+    scroll-snap-align: start;
+}
+
+.current-events article {
+    text-align: center;
+    width: 360px;
+    height: auto;
+    margin: 1rem;
+    padding: 0 1rem;
+}
+
+.current-events img {
+    height: 200px;
+    width: auto;
+    border: 2px solid var(--dark-background);
+    box-shadow: rgba(0, 0, 0, 0.5) 6px 5px;
+    border-radius: 5px;
+}
+
+.current-events p {
+    font-family: "Roboto", sans-serif;
+    font-size: .8rem;
+}
+
+
+.company-spotlights {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    background-color: var(--light-background);
+    margin: 1rem;
+    border: 2px solid var(--dark-background);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.company-spotlights>* {
+    scroll-snap-align: start;
+}
+
+.company-spotlights .spotlight {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    margin: 1rem 2rem;
+}
+
+.company-spotlights img {
+    height: 160px;
+    width: auto;
+    border: 2px solid var(--dark-background);
+    box-shadow: rgba(0, 0, 0, 0.5) 8px 9px;
+    border-radius: 50%;
+}
+
+.company-spotlights p {
+    font-family: "Roboto", sans-serif;
+    font-size: .9rem;
+}
+
+.company-spotlights .spotlight::before {
+    content: "⭐⭐⭐⭐⭐";
+    font-size: .8rem;
+}
+
+@media (min-width: 400px) {
+    .hero-text {
+        padding: .5rem 1rem;
+        width: 300px;
+        height: 160px;
+        line-height: 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: 1rem;
+    }
+
+    #calltoaction {
+        padding: .5rem 1rem;
+    }
+
+    #calltoaction a {
+        padding: 2rem;
+    }
 }
