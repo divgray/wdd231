@@ -82,20 +82,24 @@ nav.navbar a:hover {
 @media (min-width: 600px) {
     nav.navbar {
         display: flex;
-        position: static;
+        position: relative;
         flex-direction: row;
         justify-content: end;
         background-color: transparent;
         opacity: 1;
         margin-top: 3rem;
+        z-index: 1000;
     }
 
     nav ul {
         display: flex;
     }
 
+    nav.navbar a {
+        pointer-events: auto;
+    }
+
     #ham {
         display: none;
     }
-
 }
