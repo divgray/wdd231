@@ -117,7 +117,7 @@ h2 {
 }
 
 .weather {
-    background-color: var(--gray-background, #f2f2f2);
+    background-color: var(--light-background);
     border: 1px solid var(--dark-background, #333);
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -281,8 +281,8 @@ h3 {
 }
 
 .company-spotlights img {
-    height: 160px;
-    width: auto;
+    height: 100px;
+    width: 100px;
     border: 2px solid var(--dark-background);
     box-shadow: rgba(0, 0, 0, 0.5) 8px 9px;
     border-radius: 50%;
