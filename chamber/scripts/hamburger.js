@@ -3,6 +3,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     hamButton.addEventListener("click", () => {
         hamButton.classList.toggle("open");
-        // The adjacent sibling rule takes care of showing/hiding the nav
     });
 });
