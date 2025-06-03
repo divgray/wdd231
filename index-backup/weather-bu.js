@@ -98,13 +98,3 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchCurrent();
     fetchForecast();
 });
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     const weatherIcon = document.getElementById('weather-icon');
-//     // const iconUrl = getWeatherIconUrl();
-//     if (iconUrl) {
-//         weatherIcon.src = iconUrl;
-//     } else {
-//         weatherIcon.src = "images/see.webp";
-//     }
-// });
