@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener('DOMContentLoaded', function () {
     const weatherIcon = document.getElementById('weather-icon');
-    const iconUrl = getWeatherIconUrl();
+    // const iconUrl = getWeatherIconUrl();
     if (iconUrl) {
         weatherIcon.src = iconUrl;
     } else {
