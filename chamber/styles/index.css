@@ -11,6 +11,36 @@ body {
     overflow-x: hidden;
 }
 
+header span,
+.hero-text,
+h2,
+h3 {
+    font-family: "Prompt", sans-serif;
+}
+
+.weather,
+.current-events p,
+.company-spotlights p {
+    font-family: "Roboto", sans-serif;
+}
+
+.forecast-cards,
+.current-events,
+.company-spotlights {
+    overflow-x: auto;
+}
+
+.current-events>*,
+.company-spotlights>* {
+    scroll-snap-align: start;
+}
+
+.current-events,
+.company-spotlights {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
 main {
     min-height: 800px;
 }
@@ -31,7 +61,15 @@ header {
     background-color: var(--gray-background);
 }
 
-header img,
+header img {
+    width: 80px;
+    height: 80px;
+    margin: 1rem 0 1rem 1rem;
+    border-radius: 50%;
+
+    background-color: transparent;
+}
+
 header span,
 .navbar {
     width: 100%;
@@ -40,21 +78,12 @@ header span,
 }
 
 header span {
-    font-family: "Prompt", sans-serif;
     color: var(--text-color);
     font-size: 1.2rem;
     font-weight: bolder;
     margin-left: 1rem;
     flex-grow: 1;
 }
-
-header img {
-    width: 80px;
-    height: 80px;
-    margin: 1rem 0 1rem 1rem;
-    border-radius: 50%;
-}
-
 
 .hero {
     position: relative;
@@ -68,7 +97,6 @@ header img {
 }
 
 .hero-text {
-    font-family: "Prompt", sans-serif;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -76,23 +104,23 @@ header img {
     color: black;
     text-align: center;
     padding: 0 1rem;
-    background: rgb(225, 225, 225, 0.8);
+    background: rgba(225, 225, 225, 0.8);
     border-radius: 5px;
     width: 260px;
     height: 150px;
-    line-height: .8rem;
+    line-height: 0.8rem;
 }
 
 .hero-text h1 {
-    font-size: .9rem;
+    font-size: 0.9rem;
 }
 
 .hero-text p {
-    font-size: .8rem;
+    font-size: 0.8rem;
 }
 
 #calltoaction {
-    padding: .5rem;
+    padding: 0.5rem;
     cursor: pointer;
     background-color: rgb(255, 255, 255);
     border: 2px solid yellow;
@@ -105,15 +133,19 @@ header img {
     text-decoration: none;
     color: var(--text-color);
     font-weight: bold;
-    padding: .5rem;
-
+    padding: 0.5rem;
 }
 
-
 h2 {
-    font-family: "Prompt", sans-serif;
     font-size: 1.2rem;
-    margin: 2.5rem 0 1rem 1rem
+    margin: 2.5rem 0 1rem 1rem;
+}
+
+h3 {
+    box-shadow: var(--box-shadow);
+    padding: 0.5rem;
+    background-color: white;
+    font-size: 1rem;
 }
 
 .weather {
@@ -124,7 +156,6 @@ h2 {
     padding: 1rem;
     margin: 1rem;
     max-width: 600px;
-    font-family: "Roboto", sans-serif;
     color: black;
 }
 
@@ -144,14 +175,13 @@ h2 {
 
 #weather-icon {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 0.5rem;
     width: 120px;
     height: 120px;
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: var(--box-shadow);
     background-color: white;
-    margin-bottom: .5rem;
 }
 
 #weather-desc {
@@ -176,7 +206,6 @@ h2 {
     display: flex;
     justify-content: space-around;
     gap: 1rem;
-    overflow-x: auto;
     padding-bottom: 0.5rem;
 }
 
@@ -208,34 +237,17 @@ h2 {
     color: var(--primary-color, #000);
 }
 
-h3 {
-    font-family: "Prompt", sans-serif;
-    font-size: 1rem;
-    box-shadow: var(--box-shadow);
-    padding: .5rem;
-    background-color: white;
-}
-
 .current-events {
     border: 1px solid var(--dark-background);
-    background-color: var(--light-background);
     border-radius: 5px;
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto;
     margin: 1rem;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-}
-
-.current-events>* {
-    scroll-snap-align: start;
 }
 
 .current-events article {
     text-align: center;
     width: 360px;
-    height: auto;
     margin: 1rem;
     padding: 0 1rem;
 }
@@ -249,27 +261,17 @@ h3 {
 }
 
 .current-events p {
-    font-family: "Roboto", sans-serif;
-    font-size: .8rem;
+    font-size: 0.8rem;
 }
-
 
 .company-spotlights {
     display: flex;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
     background-color: var(--light-background);
-    margin: 1rem;
     border: 2px solid var(--dark-background);
     border-radius: 5px;
     padding: 1rem;
-}
-
-.company-spotlights>* {
-    scroll-snap-align: start;
 }
 
 .company-spotlights .spotlight {
@@ -288,19 +290,15 @@ h3 {
     border-radius: 50%;
 }
 
-.company-spotlights p {
-    font-family: "Roboto", sans-serif;
-    font-size: .9rem;
-}
-
 .company-spotlights .spotlight::before {
     content: "⭐⭐⭐⭐⭐";
-    font-size: .8rem;
+    font-size: 0.8rem;
 }
 
+/* Media Queries */
 @media (min-width: 400px) {
     .hero-text {
-        padding: .5rem 1rem;
+        padding: 0.5rem 1rem;
         width: 300px;
         height: 160px;
         line-height: 1rem;
@@ -311,7 +309,7 @@ h3 {
     }
 
     #calltoaction {
-        padding: .5rem 1rem;
+        padding: 0.5rem 1rem;
     }
 
     #calltoaction a {
