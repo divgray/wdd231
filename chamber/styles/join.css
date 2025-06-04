@@ -1,0 +1,172 @@
+:root,
+body {
+    --light-background: rgb(255, 255, 240);
+    --dark-background: rgb(255, 215, 0);
+    --gray-background: rgb(225, 225, 225);
+    --text-color: rgb(70, 40, 0);
+    --box-shadow: rgba(0, 0, 0, 0.5) 4px 3px;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: "Prompt", sans-serif;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    padding-left: 1rem;
+}
+
+.container {
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid var(--dark-background);
+
+}
+
+.form-container {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--gray-background);
+}
+
+label[for="first-name"],
+label[for="last-name"],
+label[for="org-title"],
+label[for="email"],
+label[for="mobile"],
+label[for="business-name"],
+legend {
+    font-family: "Prompt", sans-serif;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+#first-name,
+#last-name,
+#org-title,
+#email,
+#mobile,
+#business-name {
+    font-family: "Prompt", sans-serif;
+    border: solid 1px black;
+    border-left: 2px solid red;
+    height: 2rem;
+    width: auto;
+}
+
+fieldset {
+    margin-top: 1rem;
+    font-family: "Roboto", sans-serif;
+}
+
+legend {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+input[type="radio"] {
+    accent-color: yellow;
+    margin-right: 0.5rem;
+}
+
+#description {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    max-height: max-content;
+    border: 2px solid var(--dark-background);
+    margin: .5rem 0 1rem 0;
+}
+
+label[for="description"] {
+    font-family: "Prompt", sans-serif;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-top: 1rem;
+}
+
+input[type="submit"] {
+    font-family: "Prompt", sans-serif;
+    display: inline-block;
+    padding: .5rem 1rem;
+    font-size: .8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    background-color: var(--light-background);
+    border: 1px solid var(--dark-background);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: yellow;
+}
+
+input[type="submit"]:active {
+    background-color: var(--dark-background);
+}
+
+.cards-container {
+    border: 2px solid red;
+}
+
+.membership-card-0,
+.membership-card-1,
+.membership-card-2,
+.membership-card-3 {
+    display: block;
+    margin: 1rem;
+    border: 2px solid var(--dark-background);
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    padding-left: .5rem;
+    padding-bottom: 1rem;
+    line-height: .8rem;
+}
+
+.membership-card-0 h3::after {
+    content: " 🤍";
+    font-weight: .8rem;
+}
+
+.membership-card-1 h3::after {
+    content: " ⭐";
+    font-size: .8rem;
+}
+
+.membership-card-2 h3::after {
+    content: " ⭐⭐";
+    font-size: .8rem;
+}
+
+.membership-card-3 h3::after {
+    content: " ⭐⭐⭐";
+    font-size: .8rem;
+}
+
+h3 {
+    font-family: "Prompt", sans-serif;
+    font-size: 1.2rem;
+}
+
+.membership-card p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+}
+
+.membership-card a {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
