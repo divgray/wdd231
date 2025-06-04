@@ -51,41 +51,43 @@
     <main>
         <h1>Join Our Chamber Membership</h1>
         <div class="container">
-            <legend>Your Information</legend>
             <section class="form-container">
                 <form method="get" action="thankyou.html">
-                    <label for="first-name">
-                        First Name:
-                        <input type="text" id="first-name" name="first-name" title="Enter your first name" required
-                            autocomplete="given-name" placeholder=" Your first name">
-                    </label><br>
-                    <label for="last-name">
-                        Last Name:
-                        <input type="text" id="last-name" name="last-name" title="Enter your last name" required
-                            autocomplete="family-name" placeholder=" Your last name">
-                    </label><br>
-                    <label for="org-title">
-                        Organizational Title:
-                        <input type="text" id="org-title" name="org-title" title="Enter your organizational title"
-                            required autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}"
-                            placeholder=" Organizational title">
-                    </label><br>
-                    <label for="email">
-                        Email Address:
-                        <input type="email" id="email" name="email" title="Enter your email address" required
-                            autocomplete="email" placeholder=" Example@mail.com">
-                    </label><br>
-                    <label for="mobile">
-                        Mobile Phone Number:
-                        <input type="tel" id="mobile" name="mobile" title="Enter your mobile phone number" required
-                            autocomplete="tel" placeholder=" Your phone number">
-                    </label><br>
-                    <label for="business-name">
-                        Business/Organization Name:
-                        <input type="text" id="business-name" name="business-name"
-                            title="Enter your business or organization name" required autocomplete="organization"
-                            placeholder=" Business name">
-                    </label><br>
+                    <fieldset>
+                        <legend>Your Information</legend>
+                        <label for="first-name">
+                            First Name:
+                            <input type="text" id="first-name" name="first-name" title="Enter your first name" required
+                                autocomplete="given-name" placeholder=" Your first name">
+                        </label><br>
+                        <label for="last-name">
+                            Last Name:
+                            <input type="text" id="last-name" name="last-name" title="Enter your last name" required
+                                autocomplete="family-name" placeholder=" Your last name">
+                        </label><br>
+                        <label for="org-title">
+                            Organizational Title:
+                            <input type="text" id="org-title" name="org-title" title="Enter your organizational title"
+                                required autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}"
+                                placeholder=" Organizational title">
+                        </label><br>
+                        <label for="email">
+                            Email Address:
+                            <input type="email" id="email" name="email" title="Enter your email address" required
+                                autocomplete="email" placeholder=" Example@mail.com">
+                        </label><br>
+                        <label for="mobile">
+                            Mobile Phone Number:
+                            <input type="tel" id="mobile" name="mobile" title="Enter your mobile phone number" required
+                                autocomplete="tel" placeholder=" Your phone number">
+                        </label><br>
+                        <label for="business-name">
+                            Business/Organization Name:
+                            <input type="text" id="business-name" name="business-name"
+                                title="Enter your business or organization name" required autocomplete="organization"
+                                placeholder=" Business name">
+                        </label><br>
+                    </fieldset>
                     <fieldset>
                         <legend>Membership Level</legend>
                         <label>
