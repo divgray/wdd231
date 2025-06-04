@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metropolitan Manila Business Chamber of Commerce</title>
+    <meta name="author" content="Divya Ali Priya Giray">
+    <meta name="description" content="Discover page of the WDD231 Chamber Project.">
+    <meta name="keywords" content="Manila, Chamber, Discover">
+
+    <meta property="og:title" content="Metropolitan Manila Chamber of Commerce">
+    <meta property="og:description"
+        content="This website will serve as a resource hub for businesses in the city of Timbuktu. The site will provide information on local events, host networking opportunities, create business directories, and encourage local shopping. It aims to promote local economic growth, support local businesses, and foster a sense of community between the businesses.">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/divgray/wdd231/refs/heads/main/chamber/images/logo.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://divgray.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preload" href="styles/hamburger.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="styles/hamburger.css">
+    </noscript>
+    <link rel="stylesheet" href="styles/discover.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+    <script src="scripts/discover.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.webp" alt="Metro Manila Chamber of Commerce Logo">
+        <span>Metropolitan Manila Commerce</span>
+        <button id="ham" aria-label="menuItem"></button>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html" class="active-link">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card" id="card1">
+            <!-- <h2>Item Title</h2>
+            <figure>
+                <img src="images/your-image.webp" alt="Description of image">
+            </figure>
+            <address>123 Main St, Your City</address>
+            <p>This is a brief description of the item.</p>
+            <button onclick="window.location.href='detail.html'">Learn More</button> -->
+        </section>
+
+        <div class="discover-grid">
+        </div>
+
+        <aside class="visitor-message-area">
+            <p class="visitor-message"></p>
+        </aside>
+
+
+
+
+    </main>
+
+    <footer>
+        <div>
+            <p><b>Metropolitan Manila Business Commerce</b></p>
+            <p>Metro Manila, Philippines </p>
+            <p><a href="#">metropolitan-info.org</a></p>
+            <p><a href="#">(+639) 123-123-1234</a></p>
+        </div>
+        <img src="images/facebook.webp" loading="lazy" alt="Facebook icon">
+        <img src="images/youtube.webp" loading="lazy" alt="Youtube icon">
+        <div>
+            <p><b>WDD231 Class Project</b></p>
+            <p>Divya Ali Priya Giray</p>
+            <p>&copy; <b><span id="currentyear"></span> Metro Manila Commerce</b></p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
