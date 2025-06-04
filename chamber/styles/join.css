@@ -143,22 +143,18 @@ input[type="submit"]:active {
 
 .membership-card-0 h3::after {
     content: " 🤍";
-    font-weight: .8rem;
 }
 
 .membership-card-1 h3::after {
     content: " ⭐";
-    font-size: .8rem;
 }
 
 .membership-card-2 h3::after {
     content: " ⭐⭐";
-    font-size: .8rem;
 }
 
 .membership-card-3 h3::after {
     content: " ⭐⭐⭐";
-    font-size: .8rem;
 }
 
 h3 {
