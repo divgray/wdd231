@@ -1,39 +1,83 @@
+:root,
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    --light-background: rgb(255, 255, 240);
+    --dark-background: rgb(255, 215, 0);
+    --gray-background: rgb(225, 225, 225);
+    --text-color: rgb(70, 40, 0);
+    --box-shadow: rgba(0, 0, 0, 0.5) 4px 3px;
+    width: 100%;
+    margin: auto;
     padding: 0;
-}
-
-header,
-nav,
-footer {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+    overflow-x: hidden;
 }
 
 main {
-    padding: 1rem;
+    min-height: 300px;
+    margin-bottom: 2rem;
 }
 
-.info {
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    padding: 1rem;
-    background: #f9f9f9;
+header {
+    background-color: var(--gray-background);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 100%;
+    height: auto; */
 }
 
-.info p {
-    margin: 0.5rem 0;
+header img,
+header span,
+.navbar {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+    margin: .5rem 0 .5rem .5rem;
+    border-radius: 50%;
+}
+
+header span {
+    font-family: "Prompt", sans-serif;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-left: 1rem;
+    flex-grow: 1;
+}
+
+.return-home {
+    font-family: "Prompt", sans-serif;
+    background-color: white;
+    color: black;
+    font-size: .8rem;
+    border-radius: 5px;
+    border: 2px solid var(--dark-background);
+    box-shadow: var(--box-shadow);
+    margin: 1rem;
+    padding: .3rem .5rem;
+}
+
+h1 {
+    font-family: "Prompt", sans-serif;
+    font-size: 1.2rem;
+    margin: 1rem;
+    border: 2px solid var(--dark-background);
+    box-shadow: var(--box-shadow);
+    padding: 5px;
+}
+
+h1::after,
+h1::before {
+    content: " 🎉 ";
+}
+
+main p {
+    margin: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
 }

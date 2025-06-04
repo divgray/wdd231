@@ -11,6 +11,10 @@ body {
     overflow-x: hidden;
 }
 
+main {
+    min-height: 1000px;
+}
+
 h1 {
     font-family: "Prompt", sans-serif;
     font-size: 1.2rem;
@@ -19,15 +23,17 @@ h1 {
 }
 
 .container {
-    margin: 1rem;
+    margin: 1rem 1rem 2rem 1rem;
     padding: 1rem;
     border: 2px solid var(--dark-background);
-
+    border-radius: 5px;
+    min-width: 100px;
+    max-width: 600px;
 }
 
 .form-container {
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--gray-background);
+    padding-bottom: 1.5rem;
+    /* border-bottom: 2px solid var(--gray-background); */
 }
 
 label[for="first-name"],
@@ -117,16 +123,16 @@ input[type="submit"]:active {
     background-color: var(--dark-background);
 }
 
-.cards-container {
+/* .cards-container {
     border: 2px solid red;
-}
+} */
 
 .membership-card-0,
 .membership-card-1,
 .membership-card-2,
 .membership-card-3 {
     display: block;
-    margin: 1rem;
+    margin-bottom: 1rem;
     border: 2px solid var(--dark-background);
     box-shadow: var(--box-shadow);
     border-radius: 5px;
@@ -169,4 +175,69 @@ h3 {
     font-family: "Roboto", sans-serif;
     font-size: 1.1rem;
     text-decoration: none;
+}
+
+.modal li {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+}
+
+#modalNP {
+    border: 2px solid gray;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    margin: 0 1rem 1rem 1rem;
+    padding-left: 1rem;
+    background-color: white;
+}
+
+#modalBronze {
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    margin: 0 1rem 1rem 1rem;
+    padding-left: 1rem;
+    background-color: #CD7F32;
+}
+
+#modalSilver {
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    margin: 0 1rem 1rem 1rem;
+    padding-left: 1rem;
+    background-color: silver;
+}
+
+#modalGold {
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    margin: 0 1rem 1rem 1rem;
+    padding-left: 1rem;
+    background-color: gold;
+}
+
+
+
+h2 {
+    font-family: "Prompt", sans-serif;
+    font-size: 1.4rem;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    margin-bottom: -.8rem;
+    margin-top: -.5rem;
+
+}
+
+.close {
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: red;
+    font-weight: bolder;
+    text-shadow: -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+    /* Creates a bold black outline for the X */
 }

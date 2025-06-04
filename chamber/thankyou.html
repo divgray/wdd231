@@ -3,23 +3,48 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Thank You - Membership Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metropolitan Manila Business Chamber of Commerce</title>
+    <meta name="author" content="Divya Ali Priya Giray">
+    <meta name="description" content="The thank you page of the WDD231 Chamber Project.">
+    <meta name="keywords" content="Manila, Chamber, Thank you">
+
+    <meta property="og:title" content="Metropolitan Manila Chamber of Commerce">
+    <meta property="og:description"
+        content="This website will serve as a resource hub for businesses in the city of Timbuktu. The site will provide information on local events, host networking opportunities, create business directories, and encourage local shopping. It aims to promote local economic growth, support local businesses, and foster a sense of community between the businesses.">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/divgray/wdd231/refs/heads/main/chamber/images/logo.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://divgray.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/thankyou.css">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Prompt:wght@400;600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts/thankyou.js" defer></script>
+
 </head>
 
 <body>
     <header>
-        <h1>Chamber of Commerce</h1>
+        <img src="images/logo.webp" alt="Metropolitan Manila Business Commerce logo" srcset="">
+        <span> Metropolitan Manila Commerce </span>
+        <nav>
+            <button type="button" onclick="window.location.href='index.html';" class="return-home">
+                Back to Homepage
+            </button>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="join.html">Membership</a></li>
-            <li><a href="discover.html">Contact</a></li>
-        </ul>
-    </nav>
     <main>
-        <h2>Thank You for Your Membership Application!</h2>
+        <h1>Thank You for Your Membership Application!</h1>
         <p>We truly appreciate your interest in joining our Chamber. Below are the details you submitted:</p>
         <div class="info">
             <p><strong>First Name:</strong> <span id="display-first-name"></span></p>
@@ -31,7 +56,20 @@
         </div>
     </main>
     <footer>
-        <p>&copy; 2025 Chamber of Commerce</p>
+        <div>
+            <p><b>Metropolitan Manila Business Commerce</b></p>
+            <p>Metro Manila, Philippines </p>
+            <p><a href="#">metropolitan-info.org</a></p>
+            <p><a href="#">(+639) 123-123-1234</a></p>
+        </div>
+        <img src="images/facebook.webp" loading="lazy" alt="Facebook icon">
+        <img src="images/youtube.webp" loading="lazy" alt="Youtube icon">
+        <div>
+            <p><b>WDD231 Class Project</b></p>
+            <p>Divya Ali Priya Giray</p>
+            <p>&copy; <b><span id="currentyear"></span> Metro Manila Commerce</b></p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 
 </body>

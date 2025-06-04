@@ -21,9 +21,11 @@
     <link rel="stylesheet" href="styles/join-header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/join.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <script src="scripts/hamburger.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -106,7 +108,8 @@
                     <label for="description">
                         Business/Organization Description:
                         <textarea id="description" name="description"
-                            title="Enter a brief description of your organization"></textarea>
+                            title="Enter a brief description of your organization"
+                            placeholder="Enter a brief description of your business/organization here..."></textarea>
                     </label>
                     <input type="hidden" id="timestamp" name="timestamp" value="">
                     <input type="submit" value="Submit Membership Application">
@@ -140,7 +143,7 @@
         <div id="modalNP" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modalNP')">&times;</span>
-                <h2>NP Membership Benefits</h2>
+                <h2>NP Membership Benefits:</h2>
                 <ul>
                     <li>No membership fee</li>
                     <li>Access to non-profit events</li>
@@ -152,7 +155,7 @@
         <div id="modalBronze" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modalBronze')">&times;</span>
-                <h2>Bronze Membership Benefits</h2>
+                <h2>Bronze Membership Benefits:</h2>
                 <ul>
                     <li>Basic membership card</li>
                     <li>Newsletter subscription</li>
@@ -164,7 +167,7 @@
         <div id="modalSilver" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modalSilver')">&times;</span>
-                <h2>Silver Membership Benefits</h2>
+                <h2>Silver Membership Benefits:</h2>
                 <ul>
                     <li>All Bronze benefits</li>
                     <li>Spotlight on events homepage</li>
@@ -176,7 +179,7 @@
         <div id="modalGold" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modalGold')">&times;</span>
-                <h2>Gold Membership Benefits</h2>
+                <h2>Gold Membership Benefits:</h2>
                 <ul>
                     <li>All Silver benefits</li>
                     <li>Exclusive training sessions</li>
