@@ -49,12 +49,42 @@ header img {
     border-radius: 50%;
 }
 
+h1 {
+    font-family: "Prompt", sans-serif;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+}
 
-/* Base styling, small screens (320px to 640px) */
+h2 {
+    font-family: "Prompt", sans-serif;
+    font-size: 1.2rem;
+}
+
 .discover-grid {
     display: grid;
     gap: 1em;
     grid-template-columns: 1fr;
+}
+
+.card img {
+    height: 120px;
+    width: 200px;
+    border: 2px solid var(--dark-background);
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+}
+
+.card p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+}
+
+.card button {
+    background-color: white;
+    padding: .5rem 1rem;
+    border: 1px solid var(--dark-background);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
 }
 
 .card {
@@ -62,7 +92,14 @@ header img {
     border: 1px solid #ccc;
 }
 
-@media screen and (min-width: 641px) {
+.visitor-message {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+@media (min-width: 641px) {
     .discover-grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
@@ -105,7 +142,7 @@ header img {
     }
 }
 
-@media screen and (min-width: 1025px) {
+@media (min-width: 1025px) {
     .discover-grid {
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas:
@@ -114,7 +151,7 @@ header img {
     }
 }
 
-@media screen and (min-width: 641px) {
+@media (min-width: 641px) {
     .card figure img:hover {
         transform: scale(1.05);
         filter: brightness(1.1);

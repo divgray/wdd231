@@ -10,7 +10,7 @@ fetch('data/discover.json')
             card.innerHTML = `
           <h2>${item.name}</h2>
           <figure>
-            <img src="${item.image}" alt="Image of ${item.name}">
+            <img src="${item.image}" alt="Image of ${item.name}" loading="lazy">
           </figure>
           <address>${item.address}</address>
           <p>${item.description}</p>
@@ -39,7 +39,6 @@ if (!lastVisit) {
     }
 }
 
-// Update localStorage
 localStorage.setItem(lastVisitKey, currentTime);
 
 document.querySelector('.visitor-message').textContent = message;

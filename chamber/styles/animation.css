@@ -14,7 +14,7 @@
 
 @keyframes colorChangeBronze {
     0% {
-        background-color: lightsalmon;
+        background-color: rgb(255, 145, 101);
     }
 
     50% {
@@ -28,15 +28,15 @@
 
 @keyframes colorChangeSilver {
     0% {
-        background-color: gray;
+        background-color: lightgrey;
     }
 
     50% {
-        background-color: lightgray;
+        background-color: rgb(233, 233, 233);
     }
 
     100% {
-        background-color: silver;
+        background-color: rgb(202, 202, 202);
     }
 }
 
