@@ -1,39 +1,3 @@
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.membership-card-0,
-.membership-card-1,
-.membership-card-2,
-.membership-card-3 {
-    opacity: 0;
-    animation: fadeInUp 1.5s ease-out forwards;
-}
-
-.membership-card-0 {
-    animation-delay: 0s;
-}
-
-.membership-card-1 {
-    animation-delay: 0.3s;
-}
-
-.membership-card-2 {
-    animation-delay: 0.6s;
-}
-
-.membership-card-3 {
-    animation-delay: 0.9s;
-}
-
 :root,
 body {
     --light-background: rgb(255, 255, 240);
@@ -56,6 +20,10 @@ h1 {
     font-size: 1.2rem;
     margin-top: 2rem;
     padding-left: 1rem;
+}
+
+h1::after {
+    content: " 🤝🏼";
 }
 
 .container {
@@ -211,24 +179,24 @@ h3 {
 
 h2 {
     font-family: "Prompt", sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     text-decoration: underline;
     text-underline-offset: 6px;
-    margin-bottom: -.8rem;
+    margin-bottom: -.5rem;
     margin-top: -.5rem;
-
 }
 
 .close {
-    padding: 1rem 0;
-    font-size: 2rem;
+    margin-left: -1rem;
+    padding: .3rem .8rem;
+    border-radius: 50%;
+    font-size: 3rem;
     color: red;
     font-weight: bolder;
     text-shadow: -1px -1px 0 black,
         1px -1px 0 black,
         -1px 1px 0 black,
         1px 1px 0 black;
-    /* Creates a bold black outline for the X */
 }
 
 .cards-container a {
@@ -248,7 +216,7 @@ h2 {
 }
 
 #modalNP {
-    border: 2px solid gray;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
     box-shadow: var(--box-shadow);
     margin: 0 1rem 1rem 1rem;
@@ -287,7 +255,7 @@ h2 {
     max-width: 500px;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
     h1 {
         margin: 2rem;
     }
@@ -316,10 +284,21 @@ h2 {
     }
 
     .modaling {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin: 2rem 1rem;
         display: flex;
         justify-content: space-around;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .modaling>* {
+        scroll-snap-align: start;
+    }
+
+    .modal-content {
+        min-width: 300px;
     }
 
     .modal-content li {

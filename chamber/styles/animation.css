@@ -1,3 +1,39 @@
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-card-0,
+.membership-card-1,
+.membership-card-2,
+.membership-card-3 {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.membership-card-0 {
+    animation-delay: 0s;
+}
+
+.membership-card-1 {
+    animation-delay: 0.3s;
+}
+
+.membership-card-2 {
+    animation-delay: 0.6s;
+}
+
+.membership-card-3 {
+    animation-delay: 0.9s;
+}
+
 @keyframes colorChangeNP {
     0% {
         background-color: cornsilk;
@@ -14,15 +50,15 @@
 
 @keyframes colorChangeBronze {
     0% {
-        background-color: rgb(255, 145, 101);
+        background-color: #E6B37B;
     }
 
     50% {
-        background-color: #cd853f;
+        background-color: #df9165;
     }
 
     100% {
-        background-color: #CD7F32;
+        background-color: #d3873c;
     }
 }
 
