@@ -9,12 +9,10 @@ fetch('data/discover.json')
 
             card.innerHTML = `
           <h2>${item.name}</h2>
-          <figure>
-            <img src="${item.image}" alt="Image of ${item.name}" loading="lazy">
-          </figure>
+          <img src="${item.image}" alt="Image of ${item.name}" loading="lazy">
           <address>${item.address}</address>
           <p>${item.description}</p>
-          <button onclick="window.location.href='detail.html'">Learn More</button>
+          <button onclick="window.location.href='${item.more}'">Learn More</button>
         `;
             gridContainer.appendChild(card);
         });
@@ -39,6 +37,6 @@ if (!lastVisit) {
     }
 }
 
-localStorage.setItem(lastVisitKey, currentTime);
 
+localStorage.setItem(lastVisitKey, currentTime);
 document.querySelector('.visitor-message').textContent = message;
