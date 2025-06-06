@@ -1,9 +1,15 @@
-:root {
+:root,
+body {
     --primary-color: #0096FF;
     --secondary-color: #89CFF0;
     --header-fonts: "Quicksand", sans-serif;
     --text-fonts: "Outfit", sans-serif;
     --box-shadow: rgba(25, 25, 112, 0.5) 4px 3px;
+    margin: 1rem;
+}
+
+p {
+    font-size: 1rem;
 }
 
 header {
