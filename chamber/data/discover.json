@@ -16,43 +16,43 @@
     {
         "name": "Art Exhibits",
         "address": "Angono, Rizal",
-        "description": "As the Art Capital of the Philippines, Angono, Rizal takes the opportunity during the festival to showcase its artistic talents. Throughout the festival, visitors can explore art exhibits featuring works by local artists, including paintings, sculptures, and mixed-media installations inspired by the town’s rich history.",
+        "description": "As the Art Capital of the Philippines, Angono, Rizal takes the opportunity during the festivalToShowcase its artistic talents. Throughout the festival, visitors can explore art exhibits featuring works by local artists, including paintings, sculptures, and mixed-media installations inspired by the town’s rich history.",
         "image": "images/art.webp",
         "more": "https://businessmirror.com.ph/2022/09/12/angono-art-capital-of-the-philippines/"
     },
     {
         "name": "Nothing else to add",
         "address": "Somewhere in this neighborhood",
-        "description": "Apparently theres nothing else in this city that i can feature. Can you imagine how sad is that?",
+        "description": "Apparently theres nothing else in this city that i can feature.",
         "image": "images/see.webp",
-        "more": "Nothing to see"
+        "more": "NothingToSee"
     },
     {
         "name": "Nothing else to add",
         "address": "Somewhere in this neighborhood",
-        "description": "Apparently theres nothing else in this city that i can feature. Can you imagine how sad is that?",
+        "description": "Apparently theres nothing else in this city that i can feature.",
         "image": "images/see.webp",
-        "more": "Nothing to see"
+        "more": "NothingToSee"
     },
     {
         "name": "Nothing else to add",
         "address": "Somewhere in this neighborhood",
-        "description": "Apparently theres nothing else in this city that i can feature. Can you imagine how sad is that?",
+        "description": "Apparently theres nothing else in this city that i can feature.",
         "image": "images/see.webp",
-        "more": "Nothing to see"
+        "more": "NothingToSee"
     },
     {
         "name": "Nothing else to add",
         "address": "Somewhere in this neighborhood",
-        "description": "Apparently theres nothing else in this city that i can feature. Can you imagine how sad is that?",
+        "description": "Apparently theres nothing else in this city that i can feature.",
         "image": "images/see.webp",
-        "more": "Nothing to see"
+        "more": "NothingToSee"
     },
     {
         "name": "Nothing else to add",
         "address": "Somewhere in this neighborhood",
-        "description": "Apparently theres nothing else in this city that i can feature. Can you imagine how sad is that?",
+        "description": "Apparently theres nothing else in this city that i can feature.",
         "image": "images/see.webp",
-        "more": "Nothing to see"
+        "more": "NothingToSee"
     }
 ]
