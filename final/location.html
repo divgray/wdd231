@@ -9,10 +9,11 @@
     <meta name="description" content="The final project for WDD231.">
     <meta name="keywords" content="Skate, Bike, Park">
 
-    <link rel="stylesheet" href="styles">
+    <link rel="stylesheet" href="styles/location.css">
     <link rel="stylesheet" href="styles/headerfooter.css">
 
     <script src="scripts/menuandfooter.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
 
     <link rel="icon" href="/bikewheel.ico" type="image/x-icon">
 
@@ -44,21 +45,29 @@
     </header>
 
     <main>
-        <div>
+        <div class="locator">
             <section class="map">
-                <iframe src="" frameborder="0"></iframe>
+                <h2>Google Map:</h2>
+                <div class="responsive-iframe">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1930.178591673241!2d121.22325348586082!3d14.635654727656126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397bf0041626987%3A0x1eae9bed02b7f8dd!2sAntipolo%20Skate%20Park!5e0!3m2!1sen!2sph!4v1749467048970!5m2!1sen!2sph"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <address>Address: Sitio Cabading Antipolo City, Rizal</address>
             </section>
             <!-- <h2>Current Events:</h2>
             <section class="current-events">
             </section> -->
-            <h2>Local Weather:</h2>
+
             <section class="weather">
+                <h2>Local Weather:</h2>
                 <p id="current-date">Loading date . . .</p>
                 <p id="current-temp">Loading temperature . . .</p>
                 <p id="wind">Loading wind info . . .</p>
                 <figure>
                     <!-- <img id="weather-icon" alt="Weather icon" /> -->
-                    <img id="weather-icon" src="images/see.webp" alt="Weather icon" />
+                    <img id="weather-icon" src="images/error.webp" alt="Weather icon" />
 
                     <figcaption id="weather-desc">Loading weather description . . .</figcaption>
                 </figure>

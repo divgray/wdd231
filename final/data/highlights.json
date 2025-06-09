@@ -2,19 +2,19 @@
     {
         "name": "Someone",
         "location": "Antipolo City",
-        "trickshot": "360",
-        "img": "images/parklogo.webp"
+        "trickshot": "Wall ride",
+        "img": "images/highlights-trickshot1.webp"
     },
     {
-        "name": "",
-        "location": "",
-        "trickshot": "",
-        "img": ""
+        "name": "Someone",
+        "location": "dont know",
+        "trickshot": "Grind",
+        "img": "images/highlight4.webp"
     },
     {
-        "name": "",
-        "location": "",
-        "trickshot": "",
-        "img": ""
+        "name": "Jordan Denzo",
+        "location": "Antipolo",
+        "trickshot": "Foot Jump Tail Whip",
+        "img": "images/highlight3.webp"
     }
 ]

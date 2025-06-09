@@ -10,6 +10,13 @@ body {
     overflow-x: hidden;
 }
 
+h2 {
+    font-family: var(--header-fonts);
+    font-size: 1.2rem;
+    margin: 2rem .5rem 0 .5rem;
+    border-bottom: 2px solid darkblue;
+}
+
 
 .hero {
     position: relative;
@@ -20,6 +27,20 @@ body {
     display: block;
     width: 100vw;
     height: auto;
+    border-top: 3px solid darkblue;
+}
+
+.current-events img {
+    height: 200px;
+    width: auto;
+    margin: 1rem .5rem;
+    border: 2px solid greenyellow;
+}
+
+.current-events img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .highlights {
@@ -32,18 +53,25 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
-.highlights>* {
+/* .highlights>* {
     scroll-snap-align: start;
-}
+} */
 
 .highlights section {
     line-height: .2rem;
     border: 2px solid var(--primary-color);
-    padding: 1rem;
-    margin: 1rem;
+    margin: 1rem .5rem 1rem .5rem;
+    padding: .5rem;
 }
 
 .highlights img {
     height: 300px;
     width: auto;
+    border: 2px solid darkblue;
+}
+
+.highlights img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
