@@ -89,7 +89,7 @@ input[type="radio"] {
 
 #description {
     display: block;
-    width: 100%;
+    width: 90%;
     min-height: 50px;
     max-height: max-content;
     border: 2px solid var(--dark-background);
@@ -105,6 +105,8 @@ label[for="description"] {
 
 input[type="submit"] {
     font-family: "Prompt", sans-serif;
+    text-decoration: underline;
+    text-underline-offset: 3px;
     display: inline-block;
     padding: .5rem 1rem;
     font-size: .8rem;
@@ -219,9 +221,9 @@ h2 {
 #modalBronze,
 #modalSilver,
 #modalGold {
-    border: 3px solid rgb(0, 0, 0);
+    border: 5px solid rgb(0, 0, 0);
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.5) 4px 3px;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 4px;
     margin: 0 1rem 1rem 1rem;
     padding-left: 1rem;
     background-color: white;
