@@ -36,72 +36,72 @@
 
 @keyframes colorChangeNP {
     0% {
-        background-color: cornsilk;
+        border-color: lightgrey;
     }
 
     50% {
-        background-color: gainsboro;
+        border-color: grey;
     }
 
     100% {
-        background-color: white;
+        border-color: black;
     }
 }
 
 @keyframes colorChangeBronze {
     0% {
-        background-color: #E6B37B;
+        border-color: #E6B37B;
     }
 
     50% {
-        background-color: #df9165;
+        border-color: #df9165;
     }
 
     100% {
-        background-color: #d3873c;
+        border-color: #d3873c;
     }
 }
 
 @keyframes colorChangeSilver {
     0% {
-        background-color: lightgrey;
+        border-color: lightgrey;
     }
 
     50% {
-        background-color: rgb(233, 233, 233);
+        border-color: rgb(233, 233, 233);
     }
 
     100% {
-        background-color: rgb(202, 202, 202);
+        border-color: rgb(202, 202, 202);
     }
 }
 
 @keyframes colorChangeGold {
     0% {
-        background-color: lightyellow;
+        border-color: rgb(255, 255, 153);
     }
 
     50% {
-        background-color: yellow;
+        border-color: yellow;
     }
 
     100% {
-        background-color: gold;
+        border-color: gold;
     }
 }
 
 .modalNP {
-    animation: colorChangeNP 3s infinite alternate;
+    animation: colorChangeNP 2s infinite alternate;
 }
 
 .modalBronze {
-    animation: colorChangeBronze 3s infinite alternate;
+    animation: colorChangeBronze 2s infinite alternate;
 }
 
 .modalSilver {
-    animation: colorChangeSilver 3s infinite alternate;
+    animation: colorChangeSilver 2s infinite alternate;
 }
 
 .modalGold {
-    animation: colorChangeGold 3s infinite alternate;
+    animation: colorChangeGold 2s infinite alternate;
 }

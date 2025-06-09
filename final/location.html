@@ -9,11 +9,10 @@
     <meta name="description" content="The final project for WDD231.">
     <meta name="keywords" content="Skate, Bike, Park">
 
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles">
     <link rel="stylesheet" href="styles/headerfooter.css">
 
     <script src="scripts/menuandfooter.js" defer></script>
-    <script src="scripts/highlights.js" defer></script>
 
     <link rel="icon" href="/bikewheel.ico" type="image/x-icon">
 
@@ -34,10 +33,10 @@
         <section class="nav">
             <nav class="navbar">
                 <ul>
-                    <a href="index.html" class="active-link">Home</a>
+                    <a href="index.html">Home</a>
                     <a href="about.html">About</a>
                     <a href="rulesandregulations.html">Rules & Regulations</a>
-                    <a href="location.html">Location</a>
+                    <a href="location.html" class="active-link">Location</a>
                     <a href="gallery.html">Gallery</a>
                 </ul>
             </nav>
@@ -45,19 +44,29 @@
     </header>
 
     <main>
-        <div class="hero">
-            <img src="images/antipolo-skatepark.webp" alt="Antipolo Skate Park">
-        </div>
-        <div class="afterhero">
-            <h2>Current Events:</h2>
+        <div>
+            <section class="map">
+                <iframe src="" frameborder="0"></iframe>
+            </section>
+            <!-- <h2>Current Events:</h2>
             <section class="current-events">
-            </section>
+            </section> -->
+            <h2>Local Weather:</h2>
+            <section class="weather">
+                <p id="current-date">Loading date . . .</p>
+                <p id="current-temp">Loading temperature . . .</p>
+                <p id="wind">Loading wind info . . .</p>
+                <figure>
+                    <!-- <img id="weather-icon" alt="Weather icon" /> -->
+                    <img id="weather-icon" src="images/see.webp" alt="Weather icon" />
 
-            <h2>Highlights:</h2>
-            <section class="highlights">
+                    <figcaption id="weather-desc">Loading weather description . . .</figcaption>
+                </figure>
+                <div id="forecast">
+                    Loading forecast . . .
+                </div>
             </section>
         </div>
-
     </main>
     <footer>
         <div>

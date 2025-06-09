@@ -1,0 +1,49 @@
+:root,
+body {
+    --primary-color: #0096FF;
+    --secondary-color: #89CFF0;
+    --header-fonts: "Quicksand", sans-serif;
+    --text-fonts: "Outfit", sans-serif;
+    --box-shadow: rgba(25, 25, 112, 0.5) 4px 3px;
+    margin: auto;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero img {
+    display: block;
+    width: 100vw;
+    height: auto;
+}
+
+.highlights {
+    display: flex;
+    justify-content: space-around;
+    /* overflow-x: scroll; */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.highlights>* {
+    scroll-snap-align: start;
+}
+
+.highlights section {
+    line-height: .2rem;
+    border: 2px solid var(--primary-color);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.highlights img {
+    height: 300px;
+    width: auto;
+}

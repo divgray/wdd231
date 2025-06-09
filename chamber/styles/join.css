@@ -215,40 +215,16 @@ h2 {
     font-size: 1rem;
 }
 
-#modalNP {
-    border: 2px solid rgb(0, 0, 0);
+#modalNP,
+#modalBronze,
+#modalSilver,
+#modalGold {
+    border: 3px solid rgb(0, 0, 0);
     border-radius: 5px;
-    box-shadow: var(--box-shadow);
+    box-shadow: rgba(0, 0, 0, 0.5) 4px 3px;
     margin: 0 1rem 1rem 1rem;
     padding-left: 1rem;
     background-color: white;
-}
-
-#modalBronze {
-    border: 2px solid black;
-    border-radius: 5px;
-    box-shadow: var(--box-shadow);
-    margin: 0 1rem 1rem 1rem;
-    padding-left: 1rem;
-    background-color: #CD7F32;
-}
-
-#modalSilver {
-    border: 2px solid black;
-    border-radius: 5px;
-    box-shadow: var(--box-shadow);
-    margin: 0 1rem 1rem 1rem;
-    padding-left: 1rem;
-    background-color: silver;
-}
-
-#modalGold {
-    border: 2px solid black;
-    border-radius: 5px;
-    box-shadow: var(--box-shadow);
-    margin: 0 1rem 1rem 1rem;
-    padding-left: 1rem;
-    background-color: gold;
 }
 
 .modal {

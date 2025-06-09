@@ -1,0 +1,13 @@
+@keyframes colorChangeSection {
+    50% {
+        border-color: darkred;
+    }
+
+    100% {
+        border-color: red;
+    }
+}
+
+.reminders {
+    animation: colorChangeSection 1s infinite alternate;
+}

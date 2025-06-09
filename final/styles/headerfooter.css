@@ -1,0 +1,93 @@
+:root,
+body {
+    --primary-color: #0096FF;
+    --secondary-color: #89CFF0;
+    --header-fonts: "Quicksand", sans-serif;
+    --text-fonts: "Outfit", sans-serif;
+    --box-shadow: rgba(25, 25, 112, 0.5) 4px 3px;
+    margin: auto;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* -- header style -- */
+.heading {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    border-bottom: 2px solid darkblue;
+}
+
+header span {
+    color: darkblue;
+    font-family: var(--header-fonts);
+    padding: 0 1rem;
+    font-size: 1.5rem;
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color)
+}
+
+header button {
+    font-size: 1.5rem;
+    background-color: white;
+    color: darkblue;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+#ham::before {
+    content: "☰";
+}
+
+#ham.open::before {
+    content: "✖";
+}
+
+nav {
+    display: none;
+}
+
+.open,
+.open nav {
+    display: block;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+}
+
+nav a {
+    color: darkblue;
+    font-family: var(--header-fonts);
+    text-decoration: none;
+    padding: 1rem 0;
+}
+
+.active-link {
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    margin: .2rem .5rem;
+}
+
+/* -- footer -- */
+footer {
+    margin-top: 1rem;
+    border-top: 2px solid darkblue;
+    color: darkblue;
+    background-color: white;
+}
