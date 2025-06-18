@@ -1,20 +1,13 @@
-:root {
+:root body {
     --primary-color: #0096FF;
     --secondary-color: #89CFF0;
     --header-fonts: "Quicksand", sans-serif;
     --text-fonts: "Outfit", sans-serif;
     --box-shadow: rgba(25, 25, 112, 0.5) 4px 3px;
-}
-
-body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
-
-
-
-/* -------------- Header style ---------------- */
 
 header {
     border-bottom: 2px solid darkblue;
@@ -49,7 +42,6 @@ header {
     border: 2px solid var(--secondary-color);
 }
 
-/* Hamburger button styling */
 header button {
     font-size: 1.5rem;
     background-color: white;
@@ -70,7 +62,6 @@ header button {
     display: none;
 }
 
-/* ---------- Ham open style ----------- */
 .open,
 .open nav {
     display: block;
@@ -112,7 +103,6 @@ nav a {
     transition: transform 0.3s ease;
 }
 
-/*------------- footer style -----------*/
 footer {
     margin-top: 5rem;
     border-top: 2px solid darkblue;
@@ -182,39 +172,8 @@ footer b {
         margin: 0.5rem;
         text-align: right;
     }
-}
 
-@media (min-width: 800px) {
-    header button {
-        display: none;
-    }
 
-    header {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
 
-    .nav {
-        margin: 0 1rem 0 5rem;
-        display: flex;
-        flex: 1;
-        justify-content: center;
-        border: 2px double var(--primary-color);
-        border-radius: 5px;
-    }
 
-    nav {
-        width: 100%;
-    }
-
-    .nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
 }
