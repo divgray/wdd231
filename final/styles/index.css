@@ -105,7 +105,6 @@ h1 {
     font-family: var(--header-fonts);
     font-size: 1.2rem;
     margin: .5rem;
-    /* border-bottom: 2px double darkblue; */
     text-decoration: underline double darkblue;
     text-underline-offset: .2rem;
     animation: zoomIn 0.8s ease-out forwards;
@@ -188,11 +187,7 @@ figcaption {
     }
 
     .hero-text h1 {
-        font-family: var(--header-fonts);
         font-size: 1.4rem;
-        margin: 2rem .5rem 0 .5rem;
-        border-bottom: 2px double darkblue;
-        animation: zoomIn 0.8s ease-out forwards;
     }
 
     .hero-text p {
@@ -217,11 +212,8 @@ figcaption {
     }
 
     .hero-text h1 {
-        font-family: var(--header-fonts);
         font-size: 1.5rem;
-        margin: 2rem .5rem 0 .5rem;
-        border-bottom: 2px double darkblue;
-        animation: zoomIn 0.8s ease-out forwards;
+
     }
 
     .hero-text p {
@@ -232,18 +224,6 @@ figcaption {
 @media (min-width: 1000px) {
     .hero-text {
         line-height: 2rem;
-    }
-
-    .hero-text h1 {
-        font-family: var(--header-fonts);
-        font-size: 1.5rem;
-        margin: 2rem .5rem 0 .5rem;
-        border-bottom: 2px double darkblue;
-        animation: zoomIn 0.8s ease-out forwards;
-    }
-
-    .hero-text p {
-        font-size: 1.2rem;
     }
 }
 
