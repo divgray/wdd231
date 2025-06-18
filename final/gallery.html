@@ -9,12 +9,13 @@
     <meta name="description" content="The final project for WDD231.">
     <meta name="keywords" content="Skate, Bike, Park">
 
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/about.css">
     <link rel="stylesheet" href="styles/headerfooter.css">
+    <link rel="stylesheet" href="styles/gallery.css">
     <link rel="stylesheet" href="styles/modal.css">
 
     <script src="scripts/menuandfooter.js" defer></script>
-    <script src="scripts/highlights.js" defer></script>
+    <script src="scripts/gallery.js" defer></script>
     <script src="scripts/modal.js" defer></script>
 
     <link rel="icon" href="/bikewheel.ico" type="image/x-icon">
@@ -29,55 +30,32 @@
 <body>
     <header>
         <section class="heading">
-            <img src="images/parklogo.webp" alt="Skate park logo" loading="eager">
+            <img src="images/parklogo.webp" alt="Metro Manila Chamber of Commerce Logo">
             <span>Antipolo Skate Park</span>
             <button id="ham" aria-label="menuItem"></button>
         </section>
         <section class="nav">
             <nav class="navbar">
                 <ul>
-                    <a href="index.html" class="active-link">Home</a>
+                    <a href="index.html">Home</a>
                     <a href="about.html">About</a>
                     <a href="rulesandregulations.html">Rules & Regulations</a>
-                    <a href="gallery.html">Gallery</a>
+                    <a href="gallery.html" class="active-link">Gallery</a>
                 </ul>
             </nav>
         </section>
     </header>
-
     <main>
-        <div class="hero">
-            <img src="images/index-hero.webp" alt="Antipolo Skate Park" loading="eager">
-            <section class="hero-text">
-                <h1>Ride Free. Live Bold.</h1>
-                <p>Skaters, BMX riders, inline bladers, scooter shredders, and roller rebels—this park is your
-                    playground. Show up, level up, and roll with a crew that rides as hard as you do.</p>
-            </section>
+        <h1>Park Gallery</h1>
+        <div class="controls">
+            <button id="listView">List View</button>
+            <button id="gridView">Grid View</button>
         </div>
-
-        <div class="afterhero">
-
-
-            <h2>Current Events:</h2>
-            <section class="current-events">
-                <article>
-                    <figure>
-                        <img src="images/skate-day.webp" alt="A skate day poster" loading="lazy">
-                        <figcaption>Go Skate Day!<br>June 22,2025</figcaption>
-                    </figure>
-                </article>
-                <p>More soon...</p>
-
-            </section>
-
-            <h2>Highlights:</h2>
-            <section class="highlights">
-            </section>
-
-
+        <div id="imageContainer" class="grid">
+            <!-- Gallery items will be inserted dynamically -->
         </div>
-
     </main>
+
     <footer>
         <div id="globalImageModal" class="modal">
             <span id="globalCloseBtn" class="close">&times;</span>

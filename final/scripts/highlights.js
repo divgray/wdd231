@@ -1,20 +1,22 @@
-fetch('data/highlights.json')
-    .then(response => response.json())
-    .then(data => {
-        let gridContainer = document.querySelector('.highlights');
-        data.forEach((item, index) => {
-            let card = document.createElement('section');
-            card.classList.add('card');
-            card.id = `card${index + 1}`;
+async function loadHighlights() {
+    const response = await fetch("data/gallery.json");
+    const data = await response.json();
 
-            card.innerHTML = `
-          <img src="${item.img}" alt="Image of ${item.name}" loading="lazy">
-          <h3>${item.name}</h3>
-          <address>From ${item.location}</address>
-          <h4>${item.trickshot}</h4>
-        `;
-            gridContainer.appendChild(card);
-        });
-    })
-    .catch(err => console.error('Error fetching JSON data:', err));
-    
+    // Shuffle the array using Fisher-Yates algorithm
+    for (let i = data.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [data[i], data[j]] = [data[j], data[i]];
+    }
+
+    // Select a few (e.g., 5) random highlights
+    const selectedHighlights = data.slice(0, 3);
+
+    const highlightContainer = document.querySelector(".highlights");
+    highlightContainer.innerHTML = selectedHighlights.map(image => `
+        <div class="highlight">
+            <img src="${image.img}" alt="A photo taken at the Skate Park" loading="lazy" />
+        </div>
+    `).join("");
+}
+
+loadHighlights();

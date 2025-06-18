@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antipolo Skate Park</title>
+    <meta name="author" content="Divya Ali Priya Giray">
+    <meta name="description" content="The final project for WDD231.">
+    <meta name="keywords" content="Skate, Bike, Park, Staff">
+
+    <link rel="stylesheet" href="styles/staff.css">
+    <link rel="stylesheet" href="styles/headerfooter.css">
+    <link rel="stylesheet" href="styles/modal.css">
+
+    <script src="scripts/menuandfooter.js" defer></script>
+    <script src="scripts/modal.js" defer></script>
+
+    <link rel="icon" href="/bikewheel.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <section class="heading">
+            <img src="images/parklogo.webp" alt="Skate park logo">
+            <span>Antipolo Skate Park</span>
+            <button type="button" onclick="window.location.href='index.html';" class="return-home">
+                Back to Homepage
+            </button>
+    </header>
+    <main>
+        <div class="staff">
+            <h3>Sports Head Commitee</h3>
+            <figure>
+                <img src="images/see.webp" alt="someone" loading="lazy">
+                <figcaption>Sir Patrick</figcaption>
+            </figure>
+            <h3>Admins:</h3>
+            <section class="admins">
+                <figure>
+                    <img src="images/see.webp" alt="hmm someone" loading="lazy">
+                    <figcaption>Admin Ronald</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/see.webp" alt="hmm someone" loading="lazy">
+                    <figcaption>Admin John</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/see.webp" alt="hmm someone" loading="lazy">
+                    <figcaption>Admin Tonee</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/see.webp" alt="hmm someone" loading="lazy">
+                    <figcaption>Admin Monica</figcaption>
+                </figure>
+            </section>
+            <h3>Coaches:</h3>
+            <section class="coaches">
+                <figure>
+                    <img src="images/see.webp" alt="hmm someone" loading="lazy">
+                    <figcaption>Coach Anjo</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/see.webp" alt="hmm someone" loading="lazy">
+                    <figcaption>Coach Nick</figcaption>
+                </figure>
+            </section>
+            <h3>O.P.S.S.:</h3>
+            <section class="ops">
+                <figure>
+                    <img src="images/see.webp" alt="hmm someone" loading="lazy">
+                    <figcaption>O.P.S.S.</figcaption>
+                </figure>
+            </section>
+            <h3>Medic:</h3>
+            <section class="medic">
+                <figure>
+                    <img src="images/see.webp" alt="hmm someone" loading="lazy">
+                    <figcaption>Volunteer Medics</figcaption>
+                </figure>
+            </section>
+
+
+        </div>
+    </main>
+    <footer>
+        <div id="globalImageModal" class="modal">
+            <span id="globalCloseBtn" class="close">&times;</span>
+            <img id="globalModalImage" class="modal-content" alt="Full screen image" loading="lazy">
+        </div>
+
+        <div>
+            <h3>Antipolo Skate Park</h3>
+            <p>Goverment Center, Marcos Highway</p>
+            <p>Sitio Cabading, Barangay Inarawan</p>
+        </div>
+        <article>
+            <p>Contact Us</p>
+            <div class="icons">
+                <a href="https://github.com/divgray"> <img src="images/github.webp" alt="github logo"></a>
+                <a href="https://m.me/your.divyagiray"> <img src="images/facebook.webp" alt="facebook logo"></a>
+                <a href="https://m.me/your.divyagiray?ref=Hi%20there%2C%20I%27d%20like%20to%20know%20more!"> <img
+                        src="images/messenger.webp" alt="messenger logo"></a>
+            </div>
+        </article>
+        <div>
+            <p><b>WDD231 Class Final Project</b></p>
+            <p>Divya Ali Priya Giray</p>
+            <p>&copy; <b><span id="currentyear"></span> Rizal, Philippines</b></p>
+        </div>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>

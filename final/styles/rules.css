@@ -8,6 +8,7 @@ body {
     margin: auto;
     padding: 0;
     overflow-x: hidden;
+    max-width: 1200px;
 }
 
 main {
@@ -15,11 +16,14 @@ main {
     margin: 1rem;
 }
 
+header {
+    margin-bottom: 3rem;
+}
+
 h1 {
     font-family: var(--header-fonts);
     color: darkblue;
     font-size: 1.2rem;
-    border-bottom: 2px solid var(--primary-color);
     margin: 2rem 0 .5rem 0;
 }
 
@@ -51,7 +55,11 @@ aside {
 }
 
 .reminders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 5px solid red;
+    border-radius: 5px;
     font-family: var(--header-fonts);
     font-size: 1rem;
     padding: 0 1rem;
@@ -62,6 +70,22 @@ aside {
     font-weight: bolder;
     font-size: 1.2rem;
 }
+
+.reminders img {
+    width: 220px;
+    height: auto;
+    border: 4px double red;
+    align-self: center;
+    margin: 1rem;
+}
+
+
+.schedule,
+.houserules,
+.reminders {
+    margin-bottom: 5rem;
+}
+
 
 @media (min-width: 500px) {
     .schedule {
@@ -74,5 +98,9 @@ aside {
         padding: 0 1rem;
         border-radius: 5px;
         box-shadow: var(--box-shadow);
+    }
+
+    .reminders img {
+        width: 360px;
     }
 }

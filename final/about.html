@@ -11,8 +11,11 @@
 
     <link rel="stylesheet" href="styles/about.css">
     <link rel="stylesheet" href="styles/headerfooter.css">
+    <link rel="stylesheet" href="styles/modal.css">
 
     <script src="scripts/menuandfooter.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/modal.js" defer></script>
 
     <link rel="icon" href="/bikewheel.ico" type="image/x-icon">
 
@@ -26,7 +29,7 @@
 <body>
     <header>
         <section class="heading">
-            <img src="images/parklogo.webp" alt="Metro Manila Chamber of Commerce Logo">
+            <img src="images/parklogo.webp" alt="Skate park logo" loading="eager">
             <span>Antipolo Skate Park</span>
             <button id="ham" aria-label="menuItem"></button>
         </section>
@@ -36,7 +39,6 @@
                     <a href="index.html">Home</a>
                     <a href="about.html" class="active-link">About</a>
                     <a href="rulesandregulations.html">Rules & Regulations</a>
-                    <a href="location.html">Location</a>
                     <a href="gallery.html">Gallery</a>
                 </ul>
             </nav>
@@ -45,42 +47,82 @@
 
     <main>
         <div class="hero">
-            <h1>Antipolo Skate Park</h1>
-            <img src="images/highlights-trickshot1.webp" alt="error" loading="eager" id="small">
-            <img src="images/group-photo.webp" alt="group photo" loading="eager" id="larger">
-            <article class="hero-text">
-                <p>The biggest Skate Park in the Country!</p>
-                <p>Opened: May 10, 2025<br>From 2023 to 25</p>
-            </article>
+            <img src="images/highlights-trickshot1.webp" alt="see" loading="eager" id="small">
+            <img src="https://scontent.fmnl9-6.fna.fbcdn.net/v/t39.30808-6/495714554_730465599322524_9206985788372332063_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE9tq2gA7gOS4nylx5NkS5Kwp0fbYrL0IDCnR9tisvQgFBbeR4bkntqWbha5l_HiCC3I7Le5-trfKr2quaky8FW&_nc_ohc=52GyVMmBlZoQ7kNvwHSHVgZ&_nc_oc=Adm46559t6Pqm5_x6GEYwO_7tqbTyGtu-e_oFsh19Nijfa9LADz6OuWK_tztLBpoXOQ&_nc_zt=23&_nc_ht=scontent.fmnl9-6.fna&_nc_gid=knxWaoUpgszvUD9FsjBEew&oh=00_AfN7lwqm0zZpGbfn9op2SpAgamYZLbcTjIgpZWvIMEA69w&oe=68577B44"
+                alt="group photo" loading="eager" id="larger">
         </div>
-        <div class="about">
+
+        <section class="details">
             <h2>About</h2>
-            <p>The Skate park took 2 years to built from 2023 to 2025, under Antipolo city Mayor Jun Ynares approved
-                by
-                Senator Pia Cayetano, The Antipolo skate park is currently the biggest skate park at the Country.
-            </P>
-            <p>
-            <address>Address: Sito Cabading Antipolo, Rizal</address>
-            Opened: May 10, 2025</p>
-            <img src="" alt="" loading="lazy">
-        </div>
-        <div class="staff">
-            <section class="admins"></section>
-            <section class="coaches"></section>
-            <section class="ops"></section>
-            <section class="medic"></section>
+            <p>Located in Sitio Cabading, Antipolo City, this skate park is one of the
+                largest in the country and notably the first indoor facility in both CALABARZON and the National
+                Capital Region. The project, a collaborative effort between Mayor Jun Ynares and Senator Pia
+                Cayetano, kicked off in 2024 with the aim of providing local youth a safe alternative to skating on
+                busy streets. With safety and convenience as top priorities, the facility features dedicated skating
+                areas for skateboarding and BMX riding, as well as gender-inclusive and PWD-accessible amenities.
+                After months of dedicated construction, the park officially opened on Saturday, May 10, 2025,
+                marking a major milestone in Antipolo City’s commitment to promoting extreme sports in a world-class
+                setting.</p>
+            <a href="staff.html">See the full team</a>
+        </section>
 
+        <section class="map">
+            <h2>Google Map:</h2>
+            <div class="responsive-iframe">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1930.178591673241!2d121.22325348586082!3d14.635654727656126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397bf0041626987%3A0x1eae9bed02b7f8dd!2sAntipolo%20Skate%20Park!5e0!3m2!1sen!2sph!4v1749467048970!5m2!1sen!2sph"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <address>Address: Sitio Cabading Barangay Inarawan Antipolo City, Rizal</address>
+        </section>
 
-        </div>
+        <section class="weather">
+            <h2>Local Weather:</h2>
+            <div class="weather-today">
+                <p id="current-date">Loading date . . .</p>
+                <p id="current-temp">Loading temperature . . .</p>
+                <p id="wind">Loading wind info . . .</p>
+                <figure>
+                    <!-- <img id="weather-icon" alt="Weather icon" /> -->
+                    <img id="weather-icon" src="images/error.webp" alt="Weather icon" />
+
+                    <figcaption id="weather-desc">Loading weather description . . .</figcaption>
+                </figure>
+            </div>
+            <div id="forecast">
+                Loading forecast . . .
+            </div>
+        </section>
+
 
     </main>
     <footer>
-        <div>
-            <p><b>WDD231 Class Final Project</b></p>
-            <p>Divya Ali Priya Giray</p>
-            <p>&copy; <span id="currentyear"></span> Rizal, <b>PH</b></p>
-            <p id="lastModified"></p>
+        <div id="globalImageModal" class="modal">
+            <span id="globalCloseBtn" class="close">&times;</span>
+            <img id="globalModalImage" class="modal-content" alt="Full screen image" loading="lazy">
         </div>
+
+        <div>
+            <b class="park">Antipolo Skate Park</b>
+            <p>Goverment Center, Marcos Highway</p>
+            <p>Sitio Cabading, Barangay Inarawan</p>
+        </div>
+        <article>
+            <p>Contact Us</p>
+            <div class="icons">
+                <a href="https://github.com/divgray"> <img src="images/github.webp" alt="github logo"></a>
+                <a href="https://m.me/your.divyagiray"> <img src="images/facebook.webp" alt="facebook logo"></a>
+                <a href="https://m.me/your.divyagiray?ref=Hi%20there%2C%20I%27d%20like%20to%20know%20more!"> <img
+                        src="images/messenger.webp" alt="messenger logo"></a>
+            </div>
+        </article>
+        <div>
+            <p><b>WDD231 Final Project</b></p>
+            <p>Divya Ali Priya Giray</p>
+            <p>&copy; <b><span id="currentyear"></span> Rizal, PH</b></p>
+        </div>
+        <p id="lastModified"></p>
     </footer>
 </body>
 
