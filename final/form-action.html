@@ -7,15 +7,13 @@
     <title>Antipolo Skate Park</title>
     <meta name="author" content="Divya Ali Priya Giray">
     <meta name="description" content="The final project for WDD231.">
-    <meta name="keywords" content="Skate, Bike, Park">
+    <meta name="keywords" content="Skate, Bike, Park, Submission">
 
-    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/staff.css">
     <link rel="stylesheet" href="styles/headerfooter.css">
-    <link rel="stylesheet" href="styles/gallery.css">
     <link rel="stylesheet" href="styles/modal.css">
 
     <script src="scripts/menuandfooter.js" defer></script>
-    <script src="scripts/gallery.js" defer></script>
     <script src="scripts/modal.js" defer></script>
 
     <link rel="icon" href="/bikewheel.ico" type="image/x-icon">
@@ -30,56 +28,44 @@
 <body>
     <header>
         <section class="heading">
-            <img src="images/parklogo.webp" alt="Metro Manila Chamber of Commerce Logo">
+            <img src="images/parklogo.webp" alt="Skate park logo">
             <span>Antipolo Skate Park</span>
-            <button id="ham" aria-label="menuItem"></button>
-        </section>
-        <section class="nav">
-            <nav class="navbar">
-                <ul>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="rulesandregulations.html">Rules & Regulations</a>
-                    <a href="gallery.html" class="active-link">Gallery</a>
-                </ul>
-            </nav>
-        </section>
+            <button type="button" onclick="window.location.href='index.html';" class="return-home">
+                Back to Homepage
+            </button>
     </header>
     <main>
-        <h1>Park Gallery</h1>
-        <div class="controls">
-            <button id="listView">List View</button>
-            <button id="gridView">Grid View</button>
+        <div id="result">
         </div>
-        <div id="imageContainer" class="grid">
-            <!-- Gallery items will be inserted dynamically -->
-        </div>
-
-        <section class="submission-form">
-            <h2>Submit Your Photo for the Gallery</h2>
-            <form action="form-action.html" method="get">
-                <fieldset>
-                    <legend>Image Submission Form</legend>
-                    <p>
-                        <label for="name">Your Name:</label>
-                        <input type="text" id="name" name="name" required>
-                    </p>
-                    <p>
-                        <label for="imageURL">Image URL:</label>
-                        <input type="url" id="imageURL" name="imageURL" required>
-                    </p>
-                    <p>
-                        <label for="description">Image Description:</label>
-                        <textarea id="description" name="description" required></textarea>
-                    </p>
-                    <p>
-                        <input type="submit" value="Submit">
-                    </p>
-                </fieldset>
-            </form>
-        </section>
+        <p><a href="gallery.html">Back to Gallery</a></p>
     </main>
+    <style>
+        h2 {
+            font-family: "Quicksand", sans-serif;
+            font-size: 1.5rem;
+            color: darkblue;
+        }
 
+        p {
+            font-family: "Outfit", sans-serif;
+            font-size: 1rem;
+        }
+    </style>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        const imageURL = params.get('imageURL');
+        const description = params.get('description');
+
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = `
+      <h2>Thank you, ${name}!</h2>
+      <p>Your submission details:</p>
+      <p><strong>Image URL:</strong> <a href="${imageURL}" target="_blank">${imageURL}</a></p>
+      <p><strong>Description:</strong> ${description}</p>
+      <img src="${imageURL}" alt="Submitted Gallery Image" style="max-width: 200px;"/>
+    `;
+    </script>
     <footer>
         <div id="globalImageModal" class="modal">
             <span id="globalCloseBtn" class="close">&times;</span>
@@ -107,6 +93,7 @@
         </div>
         <p id="lastModified"></p>
     </footer>
+
 </body>
 
 </html>

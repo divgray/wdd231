@@ -9,7 +9,7 @@ async function loadHighlights() {
     }
 
     // Select a few (e.g., 5) random highlights
-    const selectedHighlights = data.slice(0, 3);
+    const selectedHighlights = data.slice(0, 4);
 
     const highlightContainer = document.querySelector(".highlights");
     highlightContainer.innerHTML = selectedHighlights.map(image => `
