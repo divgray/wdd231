@@ -1,11 +1,10 @@
-// Function to load the gallery images from your gallery.json file
+
 async function loadGallery() {
     const imageContainer = document.getElementById('imageContainer');
     try {
         const response = await fetch("data/gallery.json");
         const data = await response.json();
 
-        // Map over the fetched data to create your gallery items
         imageContainer.innerHTML = data.map(image => `
       <div class="gallery-view">
         <img src="${image.img}" loading="lazy" alt="A photo taken at the skatepark.">
@@ -17,7 +16,6 @@ async function loadGallery() {
 }
 loadGallery();
 
-// Toggles for grid and list views (if still needed)
 const gridViewBtn = document.getElementById('gridView');
 const listViewBtn = document.getElementById('listView');
 
