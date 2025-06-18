@@ -61,6 +61,12 @@ aside {
     padding: 0 1rem;
 }
 
+.schedule span {
+    font-family: var(--text-fonts);
+    font-size: .8rem;
+    margin-left: -1rem;
+}
+
 .reminders {
     display: flex;
     flex-direction: column;
