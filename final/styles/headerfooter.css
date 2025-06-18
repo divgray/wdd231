@@ -114,6 +114,7 @@ nav a {
 
 /*------------- footer style -----------*/
 footer {
+    margin-top: 3rem;
     border-top: 2px solid darkblue;
     padding-top: 1rem;
     position: relative;
