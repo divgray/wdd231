@@ -84,7 +84,7 @@ header button {
     margin: 0 1rem 1rem 1rem;
 }
 
-nav ul {
+nav li {
     display: flex;
     flex-direction: column;
     text-align: center;
