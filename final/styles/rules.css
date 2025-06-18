@@ -38,6 +38,7 @@ h2 {
     font-family: var(--header-fonts);
     color: darkblue;
     font-size: 1rem;
+    margin-top: 5rem;
 }
 
 li,
