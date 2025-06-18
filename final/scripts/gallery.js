@@ -1,4 +1,3 @@
-
 async function loadGallery() {
     const imageContainer = document.getElementById('imageContainer');
     try {
