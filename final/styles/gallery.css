@@ -99,6 +99,14 @@ h1 {
     flex-direction: row;
 }
 
+figure>span,
+p,
+figcaption {
+    font-family: var(--header-fonts);
+    padding-left: 1rem;
+    line-height: .5rem;
+}
+
 .submission-form {
     margin: 5rem auto;
     padding: 1rem;

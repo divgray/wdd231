@@ -6,7 +6,12 @@ async function loadGallery() {
 
         imageContainer.innerHTML = data.map(image => `
       <div class="gallery-view">
+        <figure>
         <img src="${image.img}" loading="lazy" alt="A photo taken at the skatepark.">
+        <span>" ${image.name} "</span>
+        <p>${image.description}</p>
+        <figcaption>${image.year}</figcaption>
+        </figure>
       </div>
     `).join("");
     } catch (err) {
