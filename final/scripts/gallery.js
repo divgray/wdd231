@@ -8,7 +8,7 @@ async function loadGallery() {
       <div class="gallery-view">
         <figure>
         <img src="${image.img}" loading="lazy" alt="A photo taken at the skatepark.">
-        <span>" ${image.name} "</span>
+        <span><b>" ${image.name} "</b></span>
         <p>${image.description}</p>
         <figcaption>${image.year}</figcaption>
         </figure>
