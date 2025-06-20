@@ -1,13 +1,14 @@
 :root,
 body {
     --primary-color: #0096FF;
-    --secondary-color: rgb(137, 207, 240);
+    --secondary-color: #89CFF0;
     --header-fonts: "Quicksand", sans-serif;
     --text-fonts: "Outfit", sans-serif;
     --box-shadow: rgba(25, 25, 112, 0.5) 4px 3px;
-    overflow-x: hidden;
     margin: auto;
     padding: 0;
+    overflow-x: hidden;
+    max-width: 1200px;
 }
 
 main {
