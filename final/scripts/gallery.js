@@ -10,12 +10,12 @@ async function loadGallery() {
         <img src="${image.img}" loading="lazy" alt="A photo taken at the skatepark.">
         <span><b>" ${image.name} "</b></span>
         <p>${image.description}</p>
-        
         <figcaption>${image.year}</figcaption>
         </figure>
       </div>
     `).join("");
-    } catch (err) {
+    }
+    catch (err) {
         console.error("Error loading gallery:", err);
     }
 }
